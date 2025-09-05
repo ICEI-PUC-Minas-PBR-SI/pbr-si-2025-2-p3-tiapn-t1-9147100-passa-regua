@@ -16,7 +16,6 @@ A administração de finanças coletivas em viagens e eventos em grupo é, muita
 * Rodolfo Eliezer Soares Rezende
 * Victor Luiz Ribeiro de Oliveira
 
-
 ## Orientador
 
 * Cleia Marcia Gomes Amaral
