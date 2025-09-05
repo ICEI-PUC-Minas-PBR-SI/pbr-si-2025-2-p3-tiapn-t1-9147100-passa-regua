@@ -1,23 +1,25 @@
-# TÍTULO DO PROJETO
+# Passa Régua
 
-`CURSO`
+`Sistemas de Informação`
 
-`DISCIPLINA`
+`Trabalho Interdisciplinar: Aplicações para Processos de Negócios`
 
-`SEMESTRE`
+`3° Semestre`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+A administração de finanças coletivas em viagens e eventos em grupo é, muitas vezes, um desafio prático e social que gera desconfortos, mal-entendidos e até conflitos. Este trabalho propõe o desenvolvimento de um sistema digital que automatiza o gerenciamento de despesas compartilhadas, oferecendo uma solução moderna e eficiente para promover a transparência e o equilíbrio financeiro entre participantes de grupos sociais, como amigos e familiares em viagens.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Nayara Ferreira de Jesus Rodrigues
+* Paulo Arthur Araújo de Andrade
+* Rafael Nicolas Araújo Custodio
+* Rodolfo Eliezer Soares Rezende
+* Luiz Ribeiro de Oliveira
+
 
 ## Orientador
 
-* Nome completo do professor 1
+* Cleia Marcia Gomes Amaral
 
 ## Instruções de utilização
 

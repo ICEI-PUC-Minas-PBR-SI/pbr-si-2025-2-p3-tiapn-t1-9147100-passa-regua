@@ -55,7 +55,7 @@ O processo manual de gerenciar despesas em grupo é viável apenas para grupos p
 
 ### 3.2. Descrição geral da proposta (Modelagem TO BE)
 
-A proposta de solução do projeto **Passa Régua** consiste em um aplicativo colaborativo para organização e controle de despesas em grupo. Diferente do modelo atual, que depende de planilhas manuais e trocas informais de mensagens, a aplicação centraliza todas as informações em uma única plataforma, permitindo o registro de gastos, rateio automático, cálculo de saldos e acompanhamento em tempo real pelos participantes. Dessa forma, busca-se maior eficiência, transparência e justiça no processo de divisão de valores.
+A proposta de solução do projeto Passa Régua consiste em um aplicativo colaborativo para organização e controle de despesas em grupo. Diferente do modelo atual, que depende de planilhas manuais e trocas informais de mensagens, a aplicação centraliza todas as informações em uma única plataforma, permitindo o registro de gastos, rateio automático, cálculo de saldos e acompanhamento em tempo real pelos participantes. Dessa forma, busca-se maior eficiência, transparência e justiça no processo de divisão de valores.
 
 Entre os limites da solução, destacam-se a necessidade de que todos os usuários registrem corretamente suas despesas para garantir a acurácia dos cálculos, além da dependência de conexão com a internet e do uso de dispositivos móveis. Em situações mais complexas, como regras de divisão específicas, pagamentos parcelados ou uso de diferentes moedas, o sistema poderá exigir futuras adaptações.
 
