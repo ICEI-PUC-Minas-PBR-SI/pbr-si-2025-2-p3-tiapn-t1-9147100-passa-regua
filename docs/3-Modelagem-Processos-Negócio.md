@@ -61,6 +61,12 @@ Cada processo identificado deve ter seu modelo TO-BE específico. Descrevam as o
 
 _Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias._
 
+![TO-BE-Macro](images/passa-regua-macro.png)
+![TO-BE-Processo 1](images/passa-regua-cadastro-login.png)
+![TO-BE-Processo 2](images/passa-regua-gerenciamento-de-grupo.png)
+![TO-BE-Processo 3](images/passa-regua-gerenciamento-de-membros.png)
+![TO-BE-Processo 4](images/passa-regua-gerenciamento-de-despesas.png)
+![TO-BE-Processo 5](images/passa-regua-pagamentos.png)
 ### 3.3. Modelagem dos processos
 
 [PROCESSO 1 - Nome do Processo](./processos/processo-1-nome-do-processo.md "Detalhamento do Processo 1.")
