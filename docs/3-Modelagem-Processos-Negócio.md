@@ -55,11 +55,16 @@ O processo manual de gerenciar despesas em grupo é viável apenas para grupos p
 
 ### 3.2. Descrição geral da proposta (Modelagem TO BE)
 
-Tendo identificado os gargalos dos modelos AS IS, apresentem uma descrição da proposta de solução, buscando maior eficiência com a introdução da tecnologia. Abordem também os limites dessa solução e o seu alinhamento com as estratégias e objetivos do contexto de negócio escolhido. 
-Colem aqui os modelos da solução proposta (modelo TO BE) elaborados com o apoio da ferramenta baseada em BPMN utilizada na disciplina.
-Cada processo identificado deve ter seu modelo TO-BE específico. Descrevam as oportunidades de melhoria de cada processo da solução proposta.
+A proposta de solução do projeto Passa Régua consiste em um aplicativo colaborativo para organização e controle de despesas em grupo. Diferente do modelo atual, que depende de planilhas manuais e trocas informais de mensagens, a aplicação centraliza todas as informações em uma única plataforma, permitindo o registro de gastos, rateio automático, cálculo de saldos e acompanhamento em tempo real pelos participantes. Dessa forma, busca-se maior eficiência, transparência e justiça no processo de divisão de valores.
 
-_Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias._
+Entre os limites da solução, destacam-se a necessidade de que todos os usuários registrem corretamente suas despesas para garantir a acurácia dos cálculos, além da dependência de conexão com a internet e do uso de dispositivos móveis. Em situações mais complexas, como regras de divisão específicas, pagamentos parcelados ou uso de diferentes moedas, o sistema poderá exigir futuras adaptações.
+
+O alinhamento da proposta com os objetivos do negócio está diretamente ligado à redução de conflitos e constrangimentos entre os participantes, promovendo maior confiança, organização e praticidade. A estratégia é oferecer uma ferramenta acessível e intuitiva, que simplifique o controle financeiro coletivo, evitando erros comuns no processo manual e contribuindo para uma experiência mais positiva para todos os envolvidos.
+
+No que se refere ao processo de pagamentos, o aplicativo não realiza validações bancárias automáticas. Em vez disso, os membros do grupo registram os pagamentos efetuados, e o administrador do grupo é responsável por confirmar ou recusar essas informações. Uma vez confirmados, os valores são automaticamente descontados da dívida individual e do total do grupo, garantindo transparência no acompanhamento dos saldos.
+
+Como oportunidades de melhoria, destacam-se a implementação de notificações automáticas para lembrar os devedores, a disponibilização de relatórios e históricos de eventos passados, a exportação de dados em diferentes formatos e a inclusão de elementos de gamificação, como selos ou recompensas para quem realiza seus acertos em dia. Tais funcionalidades ampliam o valor da solução e garantem sua evolução contínua.
+
 
 ![TO-BE-Macro](images/passa-regua-macro.png)
 ![TO-BE-Processo 1](images/passa-regua-cadastro-login.png)
