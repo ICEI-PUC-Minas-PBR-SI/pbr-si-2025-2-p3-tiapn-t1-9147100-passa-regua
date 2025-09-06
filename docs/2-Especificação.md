@@ -48,10 +48,21 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|ID    | Descrição do Requisito                                                                 | Prioridade |
+|------|-----------------------------------------------------------------------------------------|------------|
+|RF-001| Permitir que o usuário crie uma conta e faça login com validação de e-mail ou celular.  | ALTA       |
+|RF-002| Permitir a criação de grupos de despesas e o gerenciamento por administradores.         | ALTA       |
+|RF-003| Enviar convites para inclusão de membros no grupo, com aceite ou recusa.                | ALTA       |
+|RF-004| Permitir a inclusão de participantes não cadastrados, com opção de substituição futura. | MÉDIA      |
+|RF-005| Registrar despesas com anexos e submetê-las à aprovação do administrador.               | ALTA       |
+|RF-006| Enviar notificações automáticas sobre aprovações, reprovações e alterações de despesas. | ALTA       |
+|RF-007| Calcular automaticamente a divisão das despesas entre os membros do grupo.              | ALTA       |
+|RF-008| Permitir o registro de pagamentos e abatimentos, com atualização dos saldos.            | ALTA       |
+|RF-009| Enviar notificações de confirmação de pagamento aos membros do grupo.                   | MÉDIA      |
+|RF-010| Oferecer visualização clara da carteira individual e coletiva do grupo.                 | MÉDIA      |
+|RF-011| Disponibilizar relatórios de despesas, saldos e histórico de eventos.                   | MÉDIA      |
+|RF-012| Implementar elementos de gamificação (medalhas, selos) para incentivar engajamento.     | BAIXA      |
+|RF-013| Gerar estatísticas de uso e comportamento dos usuários, disponibilizando relatórios para a administração do sistema. | MÉDIA |
 
 ### Requisitos não Funcionais
 
