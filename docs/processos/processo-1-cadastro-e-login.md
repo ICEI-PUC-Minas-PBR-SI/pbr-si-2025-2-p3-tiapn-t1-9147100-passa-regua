@@ -1,9 +1,9 @@
-### 3.3.1 Processo 1 – NOME DO PROCESSO
+### 3.3.1 Processo 1 – Cadastro e Login
 
 O processo modelado chama-se **"Cadastro e Login com Validação de E-mail ou Celular"**, e sua principal função é permitir que novos usuários criem uma conta de forma segura e acessem o sistema após uma verificação de identidade. Entre as **oportunidades de melhoria**, destacam-se: a possibilidade de integrar um sistema de **autenticação multifator (MFA)** para reforçar a segurança; **automatizar o envio e validação do código** para reduzir falhas manuais; e **otimizar o tempo de resposta do serviço de envio (e-mail/SMS)** para melhorar a experiência do usuário. O modelo do processo 1 foi descrito segundo o **padrão BPMN**, utilizando **pools e swimlanes** para representar os participantes (Usuário, Sistema de Autenticação e Serviço de E-mail/SMS) e detalhar o fluxo de atividades com **tarefas, eventos e fluxos de sequência**.
 
 
-![Exemplo de um Modelo BPMN do PROCESSO 1](../images/drawio-cadastro-login.png "Modelo BPMN do Processo 1.")
+![Exemplo de um Modelo BPMN do PROCESSO 1](../images/processo-1-cadastro-login.png "Modelo BPMN do Processo 1.")
 
 #### Detalhamento das atividades
 
