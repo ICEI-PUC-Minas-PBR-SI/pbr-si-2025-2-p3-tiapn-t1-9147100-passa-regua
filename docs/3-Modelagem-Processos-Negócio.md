@@ -74,6 +74,12 @@ Como oportunidades de melhoria, destacam-se a implementação de notificações 
 ![TO-BE-Processo 5](images/passa-regua-pagamentos.png)
 ### 3.3. Modelagem dos processos
 
-[PROCESSO 1 - Nome do Processo](./processos/processo-1-nome-do-processo.md "Detalhamento do Processo 1.")
+[PROCESSO 1 - Processo de cadastro e login](./processos/processo-1-cadastro-e-login.md "Detalhamento do Processo 1.")
 
-[PROCESSO 2 - Nome do Processo](./processos/processo-2-nome-do-processo.md "Detalhamento do Processo 2.")
+[PROCESSO 2 - Processo de criação de grupo](./processos/processo-2-criacao-de-grupos.md "Detalhamento do Processo 2.")
+
+[PROCESSO 3 - Processo de inclusão de mebros](./processos/processo-3-inclusao-de-membros.md "Detalhamento do Processo 2.")
+
+[PROCESSO 4 - Processo de inclusão de despesas](./processos/processo-4-inclusao-de-despesas.md "Detalhamento do Processo 2.")
+
+[PROCESSO 5 - Processo de abatimento de pagamento](./processos/processo-5-abatimento-de-pagamento.md "Detalhamento do Processo 2.")
