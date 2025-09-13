@@ -3,7 +3,7 @@
 O processo de **Entrada no Sistema** começa quando o usuário vai até o browser de sua preferência e insere a url da aplicação. O browser então exibe a tela onde é possível inserir e-mail e senha;  Já para **Preencher formulário de cadastrar** a tela de preenchimento de um formulário é apresentada onde o usuário adiciona seus dados como login, senha, nome, idade e genero; o sistema, então, envia um link de verificação para o e-mail ou sms, e, após a sua confirmação,  finaliza o registro ao ter o código validado.
 
 
-![Exemplo de um Modelo BPMN do PROCESSO 1](../images/processo-1-cadastro-login.png "Modelo BPMN do Processo 1.")
+![PROCESSO 1](../images/modelagem-1-cadastro-login-r2.png "Modelo BPMN do Processo 1.")
 
 #### Detalhamento das atividades
 

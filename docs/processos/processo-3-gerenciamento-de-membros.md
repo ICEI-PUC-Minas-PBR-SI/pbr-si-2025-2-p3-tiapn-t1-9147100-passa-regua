@@ -1,9 +1,9 @@
-### 3.3.2 Processo 2 – NOME DO PROCESSO
+### 3.3.3 Processo 3 – Gerênciamento de membros
 
 _Apresente aqui o nome e as oportunidades de melhoria para o processo 2. 
 Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN._
 
-![Exemplo de um Modelo BPMN do PROCESSO 2](../images/process.png "Modelo BPMN do Processo 2.")
+![Exemplo de um Modelo BPMN do PROCESSO 3](../images/modelagem-3-gerenciamento-de-membros.png "Modelo BPMN do Processo 3.")
 
 
 #### Detalhamento das atividades

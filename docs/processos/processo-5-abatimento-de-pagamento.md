@@ -1,9 +1,9 @@
-### 3.3.2 Processo 2 – NOME DO PROCESSO
+### 3.3.5 Processo 5 – Abatimento de pagamento
 
 _Apresente aqui o nome e as oportunidades de melhoria para o processo 2. 
 Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN._
 
-![Exemplo de um Modelo BPMN do PROCESSO 2](../images/process.png "Modelo BPMN do Processo 2.")
+![PROCESSO 5](../images/modelagem-5-abatimento-de-pagamentos.png "Modelo BPMN do Processo 5.")
 
 
 #### Detalhamento das atividades

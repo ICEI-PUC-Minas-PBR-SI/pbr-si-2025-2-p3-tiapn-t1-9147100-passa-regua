@@ -36,21 +36,16 @@ O projeto Passa Régua propõe um aplicativo colaborativo que transforma esse pr
 
 O alinhamento estratégico está em reduzir conflitos, aumentar a confiança entre os participantes e promover eficiência no gerenciamento coletivo, consolidando a aplicação como uma ferramenta prática e confiável.
 
-![TO-BE-Macro](images/passa-regua-macro.png)
-![TO-BE-Processo 1](images/passa-regua-cadastro-login.png)
-![TO-BE-Processo 2](images/passa-regua-gerenciamento-de-grupo.png)
-![TO-BE-Processo 3](images/passa-regua-gerenciamento-de-membros.png)
-![TO-BE-Processo 4](images/passa-regua-gerenciamento-de-despesas.png)
-![TO-BE-Processo 5](images/passa-regua-pagamentos.png)
+![TO-BE-Macro](images/modelagem-0-macro.png)
 
 ### 3.3. Modelagem dos processos
 
 [PROCESSO 1 - Processo de cadastro e login](./processos/processo-1-cadastro-e-login.md "Detalhamento do Processo 1.")
 
-[PROCESSO 2 - Processo de criação de grupo](./processos/processo-2-criacao-de-grupos.md "Detalhamento do Processo 2.")
+[PROCESSO 2 - Processo de criação de grupo](./processos/processo-2-gerenciamento-de-grupos.md "Detalhamento do Processo 2.")
 
-[PROCESSO 3 - Processo de inclusão de mebros](./processos/processo-3-inclusao-de-membros.md "Detalhamento do Processo 2.")
+[PROCESSO 3 - Processo de inclusão de mebros](./processos/processo-3-gerenciamento-de-membros.md "Detalhamento do Processo 2.")
 
-[PROCESSO 4 - Processo de inclusão de despesas](./processos/processo-4-inclusao-de-despesas.md "Detalhamento do Processo 2.")
+[PROCESSO 4 - Processo de inclusão de despesas](./processos/processo-4-gerenciamento-de-despesas.md "Detalhamento do Processo 2.")
 
 [PROCESSO 5 - Processo de abatimento de pagamento](./processos/processo-5-abatimento-de-pagamento.md "Detalhamento do Processo 2.")
