@@ -7,7 +7,7 @@ Além disso, o usuário pode visualizar todas as despesas do grupo e registrar n
 
 Caso o usuário seja administrador do grupo, ele terá acesso a funcionalidades adicionais, como: aprovar despesas, realizar o fechamento de contas, adicionar ou remover integrantes, e atribuir permissões de administrador a outros membros. Todas essas ações também geram notificações por e-mail para os demais participantes do grupo.
 
-![PROCESSO 2](../images/modelagem-2-gerenciamento-de-grupo.png "Modelo BPMN do Processo 2.")
+![PROCESSO 2](../images/modelagem-2-gerenciamento-de-grupo_r1.png "Modelo BPMN do Processo 2.")
 
 
 # Mapeamento dos Wireframes com os Requisitos
