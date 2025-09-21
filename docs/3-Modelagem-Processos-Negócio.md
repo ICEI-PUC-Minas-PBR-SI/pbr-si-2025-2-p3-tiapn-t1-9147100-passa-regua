@@ -44,8 +44,8 @@ O alinhamento estratégico está em reduzir conflitos, aumentar a confiança ent
 
 [PROCESSO 2 - Processo de criação de grupo](./processos/processo-2-gerenciamento-de-grupos.md "Detalhamento do Processo 2.")
 
-[PROCESSO 3 - Processo de inclusão de mebros](./processos/processo-3-gerenciamento-de-membros.md "Detalhamento do Processo 2.")
+[PROCESSO 3 - Processo de gerênciamento de mebros](./processos/processo-3-gerenciamento-de-membros.md "Detalhamento do Processo 2.")
 
-[PROCESSO 4 - Processo de inclusão de despesas](./processos/processo-4-gerenciamento-de-despesas.md "Detalhamento do Processo 2.")
+[PROCESSO 4 - Processo de gerênciamento de despesas](./processos/processo-4-gerenciamento-de-despesas.md "Detalhamento do Processo 2.")
 
 [PROCESSO 5 - Processo de abatimento de pagamento](./processos/processo-5-abatimento-de-pagamento.md "Detalhamento do Processo 2.")
