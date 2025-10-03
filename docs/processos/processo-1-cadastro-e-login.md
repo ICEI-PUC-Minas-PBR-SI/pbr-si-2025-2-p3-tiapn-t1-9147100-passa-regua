@@ -27,20 +27,7 @@ O processo de **Entrada no Sistema** inicia quando o usuário acessa o browser d
 
 ---
 
-**Atividade 2. Escolher Login ou Cadastro**
-
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-|-----------|----------|----------------|-------------------|
-| Opção     | Seleção  | Login ou Cadastro | - |
-
-| **Comando**   | **Destino**           | **Tipo** |
-|---------------|----------------------|----------|
-| Entrar        | Tela de Login        | default  |
-| Criar una conta   | Tela de Cadastro     | default  |
-
----
-
-**Atividade 3. Fazer Login**
+**Atividade 2. Fazer Login**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 |-----------|----------|----------------|-------------------|
@@ -54,7 +41,7 @@ O processo de **Entrada no Sistema** inicia quando o usuário acessa o browser d
 
 ---
 
-**Atividade 4. Preencher Formulário de Cadastro**
+**Atividade 3. Preencher Formulário de Cadastro**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 |-----------|----------|----------------|-------------------|
@@ -63,6 +50,7 @@ O processo de **Entrada no Sistema** inicia quando o usuário acessa o browser d
 | Email/OuCelular| Texto | Formato e-mail - Celular somente números, 11 dígitos (DDD + número) | - |
 | Senha      | Número    | ≥ 0 | - |
 | gênero     | Seleção   | Masculino/Feminino/Outro | - |
+| Idade      | Número    | ≥ 0 | - |
 
 | **Comando**          | **Destino**              | **Tipo** |
 |----------------------|--------------------------|----------|
@@ -71,7 +59,7 @@ O processo de **Entrada no Sistema** inicia quando o usuário acessa o browser d
 
 ---
 
-**Atividade 5. Enviar Código de Validação**
+**Atividade 4. Enviar Código de Validação**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 |-----------|----------|----------------|-------------------|
@@ -83,7 +71,7 @@ O processo de **Entrada no Sistema** inicia quando o usuário acessa o browser d
 
 ---
 
-**Atividade 6. Inserir Código de Validação**
+**Atividade 5. Inserir Código de Validação**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 |-----------|----------|----------------|-------------------|
