@@ -14,7 +14,7 @@ O processo atual de gerenciamento de despesas coletivas em eventos ou viagens de
 
 Esses problemas configuram gargalos operacionais típicos do modelo AS-IS, resultando em retrabalho, atrasos e potenciais conflitos entre os participantes.
 
-![Texto alternativo](images/Modelagem_AsIs.png)
+![Texto alternativo](images/Modelagem_AsIs_r2.png)
 
 
 ### 3.2. Descrição geral da proposta (Modelagem TO BE)
