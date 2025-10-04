@@ -7,7 +7,7 @@ O processo de **Gerenciamento de Membros** tem como objetivo permitir que o admi
 
 - Duas atividades principais de usuário (Incluir e Excluir) membros.
 
-- O restantes das atividades são de mensageria ou automáticas da aplicação.
+- O restantes das atividades são de mensageria ou automáticas da aplicação, manuais (Como copiar link) ou são subprocesso como se cadastrar onde o novo usuário irá realizar as etapas do processo 1 (Cadastro e login)
 
 ---
 
@@ -22,9 +22,9 @@ O processo de **Gerenciamento de Membros** tem como objetivo permitir que o admi
 
 | **Comandos**     | **Destino**         | **Tipo**                          |
 | ---              | ---                 | ---                               |
-| Excluir          | Excluir membro      | ---                               |
+| Excluir          | Continua na mesma tela| ---                               |
 | Incluir          | Incluir membro      | ---                               |
-
+| Definir como adm.| Continua na mesma tela| ---                               |
 
 ---
 **Atividade 2. Incluir membro**
