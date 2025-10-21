@@ -12,7 +12,7 @@ O processo de **Gerenciamento de Membros** tem como objetivo permitir que o admi
 ---
 
 #### Modelagem
-![Exemplo de um Modelo BPMN do PROCESSO 3](../images/modelagem-3-gerenciamento-de-membros.png "Modelo BPMN do Processo 3.")
+![Exemplo de um Modelo BPMN do PROCESSO 3](../images/modelagem-3-gerenciamento-de-membros-r2.png "Modelo BPMN do Processo 3.")
 
 ---
 
