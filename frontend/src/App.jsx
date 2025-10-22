@@ -2,8 +2,8 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
-import TwoFactorMethodPage from './pages/TwoFactorMethodPage';
 import VerifyCodePage from './pages/VerifyCodePage';
+import ManageGroupPage from './pages/ManageGroupPage';
 
 /**
  * The root component for Passa Régua's authentication flow.
@@ -18,8 +18,8 @@ function App() {
       <Route path="/" element={<Navigate to="/login" replace />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
-      <Route path="/two-factor" element={<TwoFactorMethodPage />} />
       <Route path="/verify-code" element={<VerifyCodePage />} />
+      <Route path="/manage-group" element={<ManageGroupPage />} />
       {/* A fallback route for undefined URLs */}
       <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>

@@ -32,7 +32,8 @@ export default function LoginPage() {
         throw new Error(msg);
       }
       const data = await res.json();
-      alert(`Você entrou como ${email}. ${data.message}`);
+      // Login bem-sucedido: redireciona para a página de gerenciamento de grupo
+      navigate('/manage-group');
     } catch (err) {
       setError(err.message);
     }

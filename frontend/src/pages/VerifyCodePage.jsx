@@ -100,7 +100,7 @@ export default function VerifyCodePage() {
 
   return (
     <div className="auth-container" style={{ position: 'relative' }}>
-      <CloseButton onClick={() => navigate('/two-factor')} />
+      <CloseButton onClick={() => navigate('/register')} />
       <h1>Digite aqui o código enviado</h1>
       {error && <div className="error-message">{error}</div>}
       <form onSubmit={handleSubmit2}>
