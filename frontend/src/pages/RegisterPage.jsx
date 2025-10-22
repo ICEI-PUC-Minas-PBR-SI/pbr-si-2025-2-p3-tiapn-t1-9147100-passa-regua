@@ -99,13 +99,13 @@ export default function RegisterPage() {
           />
         </div>
         <div className="input-field">
-          <label htmlFor="contact">Email ou celular</label>
+          <label htmlFor="contact">Email</label>
           <input
             id="contact"
             type="text"
             value={contact}
             onChange={(e) => setContact(e.target.value)}
-            placeholder="Digite seu email ou celular"
+            placeholder="Digite seu email"
           />
         </div>
         <div className="input-field">

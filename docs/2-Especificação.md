@@ -65,7 +65,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito                                                                 | Prioridade |
 |------|-----------------------------------------------------------------------------------------|------------|
-|RF-001| O sistema deve permitir que o usuário crie uma conta e faça login com validação de e-mail ou celular.  | ALTA       |
+|RF-001| O sistema deve permitir que o usuário crie uma conta e faça login com validação de e-mail.  | ALTA       |
 |RF-002| O sistema deve permitir a criação de grupos de despesas e o gerenciamento por administradores.         | ALTA       |
 |RF-003| O sistema deve permitir enviar convites para inclusão de membros no grupo, com aceite ou recusa.                | ALTA       |
 |RF-004| O sistema deve permitir a inclusão de participantes não cadastrados, com opção de substituição futura. | MÉDIA      |
@@ -88,7 +88,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RNF-002   | O sistema deve suportar acesso multiplataforma, rodando em navegadores modernos (Chrome, Firefox, Edge, Safari). | ALTA |
 | RNF-003   | As requisições do usuário devem ser processadas em no máximo **3 segundos**, em condições normais de uso. | MÉDIA |
 | RNF-004   | O sistema deve garantir a segurança dos dados, com armazenamento criptografado de credenciais (hash + salt). | ALTA |
-| RNF-005   | O sistema deve suportar autenticação via e-mail ou celular, com recuperação segura de senha. | ALTA |
+| RNF-005   | O sistema deve suportar autenticação via e-mail, com recuperação segura de senha. | ALTA |
 | RNF-006   | O sistema deve ser tolerante a falhas, exibindo mensagens de erro claras e sem perda de dados já inseridos. | MÉDIA |
 | RNF-007   | O sistema deve manter logs de atividade de usuários e operações de grupo para rastreabilidade. | MÉDIA |
 | RNF-008   | A interface deve ser intuitiva e de fácil navegação, com usabilidade adequada a usuários não técnicos. | ALTA |
