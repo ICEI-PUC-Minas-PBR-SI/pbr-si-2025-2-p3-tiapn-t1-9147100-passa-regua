@@ -32,7 +32,7 @@ O processo de **Entrada no Sistema** inicia quando o usuário acessa o browser d
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 |-----------|----------|----------------|-------------------|
 | Email    | Texto    | Formato válido | - |
-| Password     | Texto    | Mín. 8 caracteres | - |
+| Senha     | Texto    | Mín. 8 caracteres | - |
 
 | **Comando** | **Destino** | **Tipo** |
 |-------------|-------------|----------|
@@ -47,7 +47,7 @@ O processo de **Entrada no Sistema** inicia quando o usuário acessa o browser d
 |-----------|----------|----------------|-------------------|
 | Primeiro nome | Texto  | Apenas letras, mínimo 2 e máximo 30 caracteres | - |
 | Ultimo nome   | Texto  | Apenas letras, mínimo 2 e máximo 50 caracteres | - |
-| Email/OuCelular| Texto | Formato e-mail - Celular somente números, 11 dígitos (DDD + número) | - |
+| Email| Texto | Formato e-mail  | - |
 | Senha      | Número    | ≥ 0 | - |
 | gênero     | Seleção   | Masculino/Feminino/Outro | - |
 | Idade      | Número    | ≥ 0 | - |
@@ -63,7 +63,7 @@ O processo de **Entrada no Sistema** inicia quando o usuário acessa o browser d
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 |-----------|----------|----------------|-------------------|
-| Método    | Seleção  | E-mail ou Celular  | E-mail |
+| Método    | Seleção  | E-mail  | E-mail |
 
 | **Comando**    | **Destino** | **Tipo** |
 |----------------|-------------|----------|
@@ -96,8 +96,8 @@ A seguir, apresentamos a descrição de como os wireframes apresentados atendem 
 </div>
 
 ### Requisitos Atendidos:
-- **RF-001**: As telas de login e cadastro, junto à tela de validação, demonstram o fluxo completo de autenticação, incluindo validação por e-mail ou celular.
-- **RNF-005**: O fluxo de validação confirma que o sistema está preparado para autenticação via e-mail ou celular, atendendo à segurança esperada.
+- **RF-001**: As telas de login e cadastro, junto à tela de validação, demonstram o fluxo completo de autenticação, incluindo validação por e-mail.
+- **RNF-005**: O fluxo de validação confirma que o sistema está preparado para autenticação via e-mail, atendendo à segurança esperada.
 - **RNF-004**: O processo de login e validação presume boas práticas de segurança, como criptografia e controle de acesso.
 - **RNF-008**: A interface é simples e direta, voltada a usuários não técnicos.
 
@@ -106,14 +106,13 @@ A seguir, apresentamos a descrição de como os wireframes apresentados atendem 
 ## 2. Validação de Conta
 
 <div style="display: flex; gap: 20px;">
-  <img src="../images/prototipoTelas/cadastroLogin/Escolha-Metodo-Validacao.png" alt="Escolha do Método de Validação"  width="33%">
   <img src="../images/prototipoTelas/cadastroLogin/Validar-codigo.png" alt="Tela de Validação de Código"  width="33%">
   <img src="../images/prototipoTelas/cadastroLogin/codigo_invalido.png" alt="Tela de Validação de Código"   width="33%">
 </div>
 
 ### Requisitos Atendidos:
 - **RF-001**: Confirma a existência de um processo seguro de validação de conta após o cadastro.
-- **RNF-005**: Reforça o suporte à autenticação com validação por e-mail ou celular.
+- **RNF-005**: Reforça o suporte à autenticação com validação por e-mail.
 - **RNF-006**: O design dessas telas favorece uma comunicação clara de mensagens de erro em caso de código inválido.
 
 ---

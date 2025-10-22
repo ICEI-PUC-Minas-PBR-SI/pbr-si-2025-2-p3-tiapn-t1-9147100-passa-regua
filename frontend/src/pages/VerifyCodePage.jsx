@@ -4,7 +4,7 @@ import CloseButton from '../components/CloseButton';
 
 /**
  * VerifyCodePage renders the interface for the user to enter the 2FA code
- * sent via e‑mail or celular. The component uses four separate input
+ * sent via e‑mail. The component uses four separate input
  * fields to mimic the wireframe design, and offers a button to paste a
  * copied code. It also displays error feedback when an invalid code is
  * entered.
