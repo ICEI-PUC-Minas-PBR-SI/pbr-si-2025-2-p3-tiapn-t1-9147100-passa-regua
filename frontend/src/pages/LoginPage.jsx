@@ -26,6 +26,20 @@ export default function LoginPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, senha: password }),
       });
+      if (res.status === 403) {
+        const usuarioId = localStorage.getItem('auth_usuario_id');
+        if (!usuarioId) {
+          setError('2FA pendente. Nao foi possivel identificar o usuario.');
+          return;
+        }
+        await fetch('/api/auth/2fa/send', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ usuarioId: Number(usuarioId), method: 'EMAIL' }),
+        });
+        navigate('/verify-code', { state: { method: 'email' } });
+        return;
+      }
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
         const msg = data.message || (res.status === 403 ? '2FA pendente. Conclua a verificação.' : 'Credenciais inválidas.');

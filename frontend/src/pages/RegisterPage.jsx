@@ -14,6 +14,7 @@ export default function RegisterPage() {
   const [lastName, setLastName] = useState('');
   const [contact, setContact] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [gender, setGender] = useState('');
   const [age, setAge] = useState('');
   const [error, setError] = useState('');
@@ -26,6 +27,15 @@ export default function RegisterPage() {
       return;
     }
     try {
+      // valida confirmacao de senha
+      if (!confirmPassword) {
+        setError('Preencha todos os campos obrigat��rios.');
+        return;
+      }
+      if (password !== confirmPassword) {
+        setError('As senhas nao coincidem.');
+        return;
+      }
       const res = await fetch('/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -126,6 +136,16 @@ export default function RegisterPage() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Crie uma senha"
+          />
+        </div>
+        <div className="input-field">
+          <label htmlFor="confirmPassword">Confirmar senha</label>
+          <input
+            id="confirmPassword"
+            type="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            placeholder="Confirme sua senha"
           />
         </div>
         <div className="input-field" style={{ display: 'flex', gap: '0.5rem' }}>
