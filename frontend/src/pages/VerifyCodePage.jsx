@@ -123,6 +123,30 @@ export default function VerifyCodePage() {
         <button type="submit" className="button">
           Validar Código
         </button>
+        <button
+          type="button"
+          className="button outlined"
+          onClick={async () => {
+            try {
+              const usuarioId = localStorage.getItem('auth_usuario_id');
+              if (!usuarioId) {
+                alert('Não foi possível reenviar: faça login ou cadastro novamente.');
+                return;
+              }
+              const res = await fetch('/api/auth/2fa/send', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ usuarioId: Number(usuarioId), method: 'EMAIL' }),
+              });
+              if (!res.ok) throw new Error('Falha ao reenviar código.');
+              alert('Código reenviado para seu e-mail.');
+            } catch (e) {
+              alert(e.message || 'Falha ao reenviar código.');
+            }
+          }}
+        >
+          Reenviar código
+        </button>
       </form>
       <div className="small-link">
         Ao assinar, você concorda com os <a href="#">termos de serviço</a> e
