@@ -40,7 +40,11 @@ export default function RegisterPage() {
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        throw new Error(data.message || 'Falha ao registrar.');
+        const detailed = Array.isArray(data.errors)
+          ? data.errors.map((e) => e.message || '').filter(Boolean).join(' | ')
+          : undefined;
+        const msg = detailed || data.message || 'Falha ao registrar.';
+        throw new Error(msg);
       }
       const data = await res.json();
       localStorage.setItem('auth_usuario_id', String(data.usuarioId));
