@@ -1,9 +1,10 @@
 ### 3.3.4 Processo 4 – Gerenciamento de Despesas
 
 #### Descrição
-O processo de **Gerenciamento de Despesas** possibilita que os usuários incluam, visualizem, validem e abatam despesas dentro de um grupo.  
-Esse fluxo garante **centralização, transparência e rastreabilidade** das informações financeiras, reduzindo conflitos e simplificando a divisão dos gastos.  
 
+O processo de **Gerenciamento de Despesas** tem início quando o usuário acessa e visualiza o grupo ao qual pertence.
+A partir daí, ele pode **incluir novas despesas, consultar lançamentos existentes, validar valores registrados por outros participantes e realizar abatimentos conforme os pagamentos são efetuados**.
+O processo é finalizado quando **todas as despesas do grupo são validadas e quitadas**, assegurando centralização, transparência e rastreabilidade das informações financeiras, além de reduzir conflitos e simplificar a divisão dos gastos.
 ---
 
 #### Modelagem
