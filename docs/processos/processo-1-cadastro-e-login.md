@@ -69,6 +69,10 @@ O processo de **Entrada no Sistema** inicia quando o usuário acessa o browser d
 |----------------|-------------|----------|
 | Validar Código | Inserir Código de Validação | default |
 
+| **Comando**    | **Destino** | **Tipo** |
+|----------------|-------------|----------|
+| Reenviar código | Reenvia o código de Validação | default |
+
 ---
 
 **Atividade 5. Inserir Código de Validação**
