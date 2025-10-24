@@ -19,7 +19,7 @@ Possui os subprocessos
 - Abater pagamento (processo 5)
 
 #### Modelagem
-![PROCESSO 2](../images/modelagem-2-gerenciamento-de-grupo.png "Modelo BPMN do Processo 2.")
+![PROCESSO 2](../images/modelagem-2-gerenciamento-de-grupo-r2.png "Modelo BPMN do Processo 2.")
 
 
 #### Detalhamento das atividades
