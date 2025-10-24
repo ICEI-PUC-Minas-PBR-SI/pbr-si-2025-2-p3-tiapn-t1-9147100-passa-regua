@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CloseButton from '../components/CloseButton';
 
@@ -19,6 +19,8 @@ export default function RegisterPage() {
   const [age, setAge] = useState('');
   const [error, setError] = useState('');
 
+
+  const [isCallingAPI, setIsCallingAPI] = useState(false);
   const handleSubmit2 = async (e) => {
     e.preventDefault();
     setError('');
@@ -36,6 +38,8 @@ export default function RegisterPage() {
         setError('As senhas nao coincidem.');
         return;
       }
+      setIsCallingAPI(true);
+
       const res = await fetch('/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -67,6 +71,8 @@ export default function RegisterPage() {
       navigate('/verify-code', { state: { method: 'email' } });
     } catch (err) {
       setError(err.message);
+    } finally {
+      setIsCallingAPI(false);
     }
   };
 
@@ -173,9 +179,16 @@ export default function RegisterPage() {
             </select>
           </div>
         </div>
-        <button type="submit" className="button">
-          Cadastrar
+        <button type="submit" className="button" disabled={isCallingAPI}>
+          {isCallingAPI ? (
+            <>
+              <span className="spinner"></span> Cadastrando...
+            </>
+          ) : (
+            'Cadastrar'
+          )}
         </button>
+
       </form>
       <div className="small-link">
         Ao assinar, você concorda com os <a href="#">termos de serviço</a> e
