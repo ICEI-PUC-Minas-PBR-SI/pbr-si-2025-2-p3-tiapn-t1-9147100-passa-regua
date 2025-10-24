@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useRef, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import CloseButton from '../components/CloseButton';
 
 /**
@@ -16,9 +16,9 @@ export default function VerifyCodePage() {
   const [code, setCode] = useState(['', '', '', '']);
   const [error, setError] = useState('');
   const inputsRef = [useRef(null), useRef(null), useRef(null), useRef(null)];
+  const [isCallingAPI, setIsCallingAPI] = useState(false);
 
   const handleSubmit2 = async (e) => {
-    e.preventDefault();
     setError('');
     const finalCode = code.join('');
     if (finalCode.length < 4) {
@@ -31,6 +31,7 @@ export default function VerifyCodePage() {
       return;
     }
     try {
+      setIsCallingAPI(true);
       const res = await fetch('/api/auth/2fa/verify', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -43,7 +44,9 @@ export default function VerifyCodePage() {
       alert(`Código verificado com sucesso via ${method}!`);
       navigate('/login');
     } catch (err) {
-      setError(err.message);
+      setError(err.message); 
+    } finally {
+      setIsCallingAPI(false);
     }
   };
 
@@ -103,7 +106,7 @@ export default function VerifyCodePage() {
       <CloseButton onClick={() => navigate('/register')} />
       <h1>Digite aqui o código enviado</h1>
       {error && <div className="error-message">{error}</div>}
-      <form onSubmit={handleSubmit2}>
+      <form>
         <div className="code-inputs">
           {code.map((value, index) => (
             <input
@@ -120,8 +123,14 @@ export default function VerifyCodePage() {
         <button type="button" className="button outlined" onClick={handlePaste}>
           Preencher com código copiado
         </button>
-        <button type="submit" className="button">
-          Validar Código
+        <button type="button" className="button" disabled={isCallingAPI} onClick={handleSubmit2}>
+          {isCallingAPI ? (
+            <>
+              <span className="spinner"></span> Validando Código...
+            </>
+          ) : (
+            'Validar Código'
+          )}
         </button>
         <button
           type="button"
