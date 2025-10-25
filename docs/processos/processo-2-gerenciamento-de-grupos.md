@@ -10,7 +10,7 @@ Possui as atividades de usuário
 - 1 - Visualizar grupo
 - 2 - Criar novo grupo ou editar um grupo existente
 - 3 - Abrir um grupo onde é possivel gerenciar os membros e as depesas do grupo
-- 4 - Visualizar fechmanto, quando as despesas já estão consolidadas essa tela é responsavel por mostrar o que o usuário deve ou tem para receber quem está devendo ou pra quem o usuário precisa pagar
+- 4 - Visualizar fechamanto, quando as despesas já estão consolidadas essa tela é responsavel por mostrar o que o usuário deve ou tem para receber quem está devendo ou pra quem o usuário precisa pagar
 - 5 - Visualizar notificação que é onde concentra todas as notificações que o sistema irá emitir.
 
 Possui os subprocessos

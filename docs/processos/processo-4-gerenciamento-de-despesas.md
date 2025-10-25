@@ -4,7 +4,7 @@
 
 O processo de **Gerenciamento de Despesas** tem início quando o usuário acessa e visualiza o grupo ao qual pertence.
 A partir daí, ele pode **incluir novas despesas, consultar lançamentos existentes, validar valores registrados por outros participantes e realizar abatimentos conforme os pagamentos são efetuados**.
-O processo é finalizado quando **todas as despesas do grupo são validadas e quitadas**, assegurando centralização, transparência e rastreabilidade das informações financeiras, além de reduzir conflitos e simplificar a divisão dos gastos.
+O processo é finalizado quando **os membros do grupo recebem um e-mail notificando a criação da despesa ou do abatimento**, o que assegura centralização, transparência e rastreabilidade das informações financeiras, além de reduzir conflitos e simplificar a divisão dos gastos.
 ---
 
 #### Modelagem
@@ -106,12 +106,12 @@ O processo é finalizado quando **todas as despesas do grupo são validadas e qu
 
 ---
 
-##### Atividade 4.3 – Visualizar Fechamento
+##### Atividade 4.3 – Visualizar Balanço Financeiro
 
-**Descrição:** Tela que mostra o fechamento de contas, incluindo saldos individuais, histórico de despesas e botões de ação para pagamento ou confirmação.  
+**Descrição:** Tela que mostra o balanço das contas, incluindo saldos individuais, histórico de despesas e botões de ação para pagamento ou confirmação.  
 
 <div style="display: flex; gap: 20px;">
-  <img src="../images/prototipoTelas/processo4/Visualizar_Fechamento.png" alt="Tela de Fechamento de Despesas" width="45%">
+  <img src="../images/prototipoTelas/processo4/balanco_financeiro.png" alt="Tela de Balanço Financeiro" width="45%">
 </div>
 
 **Requisitos Atendidos:**

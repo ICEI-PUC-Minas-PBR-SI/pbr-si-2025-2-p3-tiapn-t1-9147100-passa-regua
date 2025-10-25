@@ -20,7 +20,6 @@ Desenvolver um sistema digital de gerenciamento financeiro para grupos de viagem
 
 ### 1.3.1 Objetivos Específicos
 
-- Implementar um sistema de medalhas baseado no comportamento financeiro dos usuários (ex: pagamento pontual, gastos acumulados, contribuição generosa);
 - Oferecer uma visualização clara da carteira individual e do saldo coletivo do grupo;
 - Automatizar o cálculo do acerto final entre os membros, indicando quem deve pagar para quem.
 
