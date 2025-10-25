@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import Avatar from '../components/Avatar.jsx';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import Header, { Icon } from '../components/Header.jsx';
 
 const initialMembers = [
   { id: 1, name: 'Ana',  balance: -50, isAdmin: true },
@@ -29,11 +31,26 @@ function LikeIcon({ filled = false }) {
 }
 
 export default function ManageGroupPage() {
-  const { id } = useParams();
+  const params = useParams();
+  const location = useLocation();
   const navigate = useNavigate();
 
-  const [members, setMembers]   = useState(initialMembers);
-  const [expenses, setExpenses] = useState(initialExpenses);
+  function safeBack() {
+    if (window.history.length > 1) navigate(-1); else navigate('/profile');
+  }
+
+  // Resolve groupId: param -> state -> querystring (?id=)
+  const state = location.state || {};
+  const qs = new URLSearchParams(location.search);
+  const groupIdFromQS = qs.get('id') ? Number(qs.get('id')) : null;
+  const groupId = params.id ? Number(params.id) : (state.groupId ?? groupIdFromQS ?? null);
+
+  const [group, setGroup] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+
+  const [members, setMembers]   = useState([]);
+  const [expenses, setExpenses] = useState([]);
 
   const [openMenuFor, setOpenMenuFor] = useState(null);
   const menuRef = useRef(null);
@@ -46,15 +63,110 @@ export default function ManageGroupPage() {
     return () => document.removeEventListener('mousedown', onClickOutside);
   }, []);
 
-  // membros
-  const toggleAdmin = (mid) =>
-    setMembers(prev => prev.map(m => (m.id === mid ? { ...m, isAdmin: !m.isAdmin } : m)));
-  const removeMember = (mid) =>
-    setMembers(prev => prev.filter(m => m.id !== mid));
+  // Load group details
+  useEffect(() => {
+    let alive = true;
+    async function load() {
+      if (!groupId) {
+        setLoading(false);
+        setError('Grupo nao informado.');
+        return;
+      }
+      setLoading(true);
+      setError('');
+      try {
+        const res = await fetch(`/api/groups/${groupId}`, { credentials: 'include' });
+        if (res.status === 401) {
+          navigate('/login', { replace: true });
+          return;
+        }
+        if (!res.ok) throw new Error('Falha ao carregar o grupo.');
+        const data = await res.json();
+        if (!alive) return;
+        setGroup(data);
+      } catch (e) {
+        if (alive) setError(e.message || 'Erro ao carregar o grupo.');
+      } finally {
+        if (alive) setLoading(false);
+      }
+    }
+    load();
+    return () => { alive = false; };
+  }, [groupId, navigate]);
+
+  // Carrega membros reais do grupo
+  useEffect(() => {
+    let alive = true;
+    async function loadMembers() {
+      if (!groupId) return;
+      try {
+        const res = await fetch(`/api/groups/${groupId}/members`, { credentials: 'include' });
+        if (!alive) return;
+        if (res.status === 401) {
+          navigate('/login', { replace: true });
+          return;
+        }
+        if (res.ok) {
+          const list = await res.json();
+          const norm = (Array.isArray(list) ? list : []).map(m => ({
+            id: m.email || String(Math.random()),
+            name: m.name || m.email || 'Membro',
+            email: m.email,
+            role: m.role,
+            isAdmin: String(m.role || '').toUpperCase() === 'OWNER' || String(m.role || '').toUpperCase() === 'ADMIN',
+            balance: 0,
+          }));
+          setMembers(norm);
+        } else {
+          setMembers([]);
+        }
+      } catch {
+        if (!alive) return;
+        setMembers([]);
+      }
+    }
+    loadMembers();
+    return () => { alive = false; };
+  }, [groupId, navigate]);
+
+  // membros - backend
+  const toggleAdmin = async (memberIdOrEmail) => {
+    const target = members.find(x => x.id === memberIdOrEmail || x.email === memberIdOrEmail);
+    if (!target || !groupId) return;
+    const email = target.email || target.id;
+    const current = String(target.role || '').toUpperCase();
+    const newRole = current === 'ADMIN' ? 'MEMBER' : 'ADMIN';
+    try {
+      const res = await fetch(`/api/groups/${groupId}/members/${encodeURIComponent(email)}/role`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ role: newRole }),
+      });
+      if (res.status === 401) { navigate('/login', { replace: true }); return; }
+      if (!res.ok) throw new Error('Falha ao atualizar papel do membro');
+      setMembers(prev => prev.map(m => ( (m.email===email || m.id===email) ? { ...m, role: newRole, isAdmin: newRole==='ADMIN' || newRole==='OWNER' } : m)));
+    } catch (e) {
+      alert(e.message || 'Erro ao atualizar membro');
+    }
+  };
+  const removeMember = async (memberIdOrEmail) => {
+    const target = members.find(x => x.id === memberIdOrEmail || x.email === memberIdOrEmail);
+    if (!target || !groupId) return;
+    const email = target.email || target.id;
+    if (!window.confirm(`Remover ${target.name || email} do grupo?`)) return;
+    try {
+      const res = await fetch(`/api/groups/${groupId}/members/${encodeURIComponent(email)}`, { method: 'DELETE', credentials: 'include' });
+      if (res.status === 401) { navigate('/login', { replace: true }); return; }
+      if (!(res.ok || res.status === 204)) throw new Error('Falha ao remover membro');
+      setMembers(prev => prev.filter(m => !(m.email===email || m.id===email)));
+    } catch (e) {
+      alert(e.message || 'Erro ao remover membro');
+    }
+  };
   const addMember = () => {
-    const name = prompt('Nome do novo membro:');
-    if (!name) return;
-    setMembers(prev => [...prev, { id: Date.now(), name, balance: 0, isAdmin: false }]);
+    if (!groupId) return;
+    navigate(`/invite-members?id=${groupId}`, { state: { groupId } });
   };
 
   // despesas
@@ -68,6 +180,16 @@ export default function ManageGroupPage() {
   const toggleLike = (eid) =>
     setExpenses(prev => prev.map(e => (e.id === eid ? { ...e, liked: !e.liked } : e)));
 
+  if (loading) {
+    return (
+      <div className="auth-container">
+        {/* Cabeçalho durante carregamento */}
+        <Header title="Carregando grupo" onBack={safeBack} />
+        <p>Carregando...</p>
+      </div>
+    );
+  }
+
   return (
     <div
       className="auth-container"
@@ -77,18 +199,26 @@ export default function ManageGroupPage() {
         paddingBottom: '2.5rem'
       }}
     >
+      {/* Cabeçalho com voltar e editar */}
+      <Header
+        title={group?.name || 'Grupo'}
+        onBack={safeBack}
+        onEdit={() => navigate(`/groups/${groupId}/edit`)}
+      />
+
       {/* Faixa cinza: seta + título + + */}
       <div className="section-bar flush">
-        <button className="icon-btn" onClick={() => navigate(-1)} aria-label="Voltar">←</button>
         <div className="section-title">Membros</div>
-        <button className="icon-btn" onClick={addMember} title="Adicionar membro">+</button>
+        <button className="icon-btn" onClick={addMember} title="Adicionar membro">
+          <Icon type="plus" />
+        </button>
       </div>
 
       {/* Lista de membros */}
       <div>
         {members.map(m => (
           <div key={m.id} className="row line" style={{ alignItems: 'center', position: 'relative' }}>
-            <div className="avatar" aria-hidden />
+            <Avatar name={m.name} email={m.email} />
             <div style={{ flex: 1 }}>
               <strong>{m.name}</strong>
               {m.isAdmin && <span className="badge-admin"> ADM</span>}
@@ -120,10 +250,10 @@ export default function ManageGroupPage() {
               <div className="floating-menu" ref={menuRef} role="menu">
                 <div className="menu-title">Membros</div>
                 <button className="menu-item" onClick={() => { removeMember(m.id); setOpenMenuFor(null); }}>
-                  Excluir (adm)
+                  Excluir
                 </button>
                 <button className="menu-item" onClick={() => { toggleAdmin(m.id); setOpenMenuFor(null); }}>
-                  {m.isAdmin ? 'Remover adm. (adm)' : 'Definir como adm. (adm)'}
+                  {String(m.role||'').toUpperCase()==='ADMIN' ? 'Remover adm.' : 'Definir como adm.'}
                 </button>
               </div>
             )}
@@ -134,7 +264,9 @@ export default function ManageGroupPage() {
       {/* Faixa cinza: Despesas + + */}
       <div className="section-bar flush" style={{ marginTop: 14 }}>
         <span className="section-title">Despesas</span>
-        <button className="icon-btn" onClick={addExpense} title="Nova despesa">+</button>
+        <button className="icon-btn" onClick={addExpense} title="Nova despesa">
+          <Icon type="plus" />
+        </button>
       </div>
 
       {/* Lista de despesas */}
@@ -164,3 +296,7 @@ export default function ManageGroupPage() {
     </div>
   );
 }
+
+
+
+

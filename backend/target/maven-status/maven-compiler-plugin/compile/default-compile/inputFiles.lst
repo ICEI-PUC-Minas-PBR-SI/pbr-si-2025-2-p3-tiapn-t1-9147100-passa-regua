@@ -1,25 +1,39 @@
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\AppApplication.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\config\CorsConfig.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\config\GlobalExceptionHandler.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\controllers\AuthController.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\controllers\GroupController.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\controllers\UsuarioController.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\dtos\auth\LoginRequest.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\dtos\auth\LoginResponse.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\dtos\auth\RegisterRequest.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\dtos\auth\RegisterResponse.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\dtos\auth\SendCodeRequest.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\dtos\auth\VerifyCodeRequest.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\dtos\group\CreateGroupRequest.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\dtos\group\GroupResponse.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\dtos\UsuarioRequest.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\dtos\UsuarioResponse.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\models\Genero.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\models\Group.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\models\TwoFactorMethod.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\models\Usuario.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\repositories\GroupRepository.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\repositories\UsuarioRepository.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\services\AuthService.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\services\GroupService.java
-C:\Users\Victo\Desktop\PASSA REGUA\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua-main\backend\src\main\java\com\passaregua\app\services\UsuarioService.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\AppApplication.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\config\CorsConfig.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\config\GlobalExceptionHandler.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\controllers\AuthController.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\controllers\FriendController.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\controllers\GroupController.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\controllers\InviteController.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\controllers\NotificationController.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\controllers\UsuarioController.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\dtos\auth\LoginRequest.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\dtos\auth\LoginResponse.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\dtos\auth\RegisterRequest.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\dtos\auth\RegisterResponse.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\dtos\auth\SendCodeRequest.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\dtos\auth\VerifyCodeRequest.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\dtos\group\CreateGroupRequest.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\dtos\group\GroupMemberResponse.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\dtos\group\GroupResponse.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\dtos\UsuarioRequest.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\dtos\UsuarioResponse.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\models\Friendship.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\models\Genero.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\models\Group.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\models\GroupMember.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\models\Invite.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\models\Notification.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\models\TwoFactorMethod.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\models\Usuario.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\repositories\FriendshipRepository.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\repositories\GroupMemberRepository.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\repositories\GroupRepository.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\repositories\InviteRepository.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\repositories\NotificationRepository.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\repositories\UsuarioRepository.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\services\AuthService.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\services\FriendService.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\services\GroupService.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\services\InviteService.java
+D:\pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua\backend\src\main\java\com\passaregua\app\services\UsuarioService.java

@@ -2,6 +2,7 @@ package com.passaregua.app.controllers;
 
 import com.passaregua.app.dtos.group.CreateGroupRequest;
 import com.passaregua.app.dtos.group.GroupResponse;
+import com.passaregua.app.dtos.group.GroupMemberResponse;
 import com.passaregua.app.services.GroupService;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
@@ -18,7 +19,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class GroupController {
 
-    private final GroupService service;
+	private final GroupService service;
 
     /** Lê o e-mail salvo na sessão pelo AuthController (/api/auth/login). */
     private String requireEmail(HttpSession session) {
@@ -48,6 +49,33 @@ public class GroupController {
         return ResponseEntity.ok(resp);
     }
 
+    // GET /api/groups/{id}/members
+    @GetMapping("/{id}/members")
+    public ResponseEntity<java.util.List<GroupMemberResponse>> members(@PathVariable Long id, HttpSession session) {
+        var list = service.listMembers(requireEmail(session), id);
+        return ResponseEntity.ok(list);
+    }
+
+    // POST /api/groups/{id}/members/{email}/role  body: { role: "ADMIN"|"MEMBER" }
+    @PostMapping("/{id}/members/{email}/role")
+    public ResponseEntity<Void> setRole(@PathVariable Long id,
+                                        @PathVariable String email,
+                                        @RequestBody java.util.Map<String, String> body,
+                                        HttpSession session) {
+        String role = body.getOrDefault("role", "MEMBER");
+        service.setMemberRole(requireEmail(session), id, email, role);
+        return ResponseEntity.ok().build();
+    }
+
+    // DELETE /api/groups/{id}/members/{email}
+    @DeleteMapping("/{id}/members/{email}")
+    public ResponseEntity<Void> removeMember(@PathVariable Long id,
+                                             @PathVariable String email,
+                                             HttpSession session) {
+        service.removeMember(requireEmail(session), id, email);
+        return ResponseEntity.noContent().build();
+    }
+
     /** PUT /api/groups/{id} (editar — apenas dono) */
     @PutMapping("/{id}")
     public ResponseEntity<GroupResponse> update(@PathVariable Long id,
@@ -70,4 +98,6 @@ public class GroupController {
         service.leave(requireEmail(session), id);
         return ResponseEntity.noContent().build();
     }
+
+    // Cover image endpoints removed (no longer supported)
 }
