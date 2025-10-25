@@ -46,6 +46,73 @@ function Tooltip({ text, children }) {
   );
 }
 
+function GroupActionsMenu({ group, onOpen, onInvite, onEdit, onDelete, onLeave }) {
+  const [open, setOpen] = useState(false);
+  const isOwner = group?.owner || group?.role === "OWNER";
+
+  function choose(action) {
+    setOpen(false);
+    action && action();
+  }
+
+  return (
+    <div style={{ position: 'relative' }}>
+      <button
+        type="button"
+        className="icon-btn"
+        aria-label="Menu do grupo"
+        onClick={() => setOpen((v) => !v)}
+        title="Mais opções"
+      >
+        <span style={{ fontSize: 20, lineHeight: 1 }}>≡</span>
+      </button>
+      {open && (
+        <div
+          style={{
+            position: 'absolute',
+            right: 0,
+            top: '100%',
+            marginTop: 8,
+            minWidth: 220,
+            background: '#fff',
+            border: '1px solid #e5e7eb',
+            boxShadow: '0 4px 10px rgba(0,0,0,0.08)',
+            borderRadius: 8,
+            padding: 8,
+            zIndex: 20,
+          }}
+        >
+          <button className="button text" style={{ width: '100%', textAlign: 'left' }} onClick={() => choose(onOpen)}>Abrir grupo</button>
+          <button className="button text" style={{ width: '100%', textAlign: 'left' }} onClick={() => choose(onInvite)}>Convidar membros</button>
+          <button className="button text" style={{ width: '100%', textAlign: 'left' }} onClick={() => choose(onEdit)}>Editar grupo</button>
+          {isOwner ? (
+            <button className="button text" style={{ width: '100%', textAlign: 'left' }} onClick={() => choose(onDelete)}>Excluir grupo</button>
+          ) : (
+            <button className="button text" style={{ width: '100%', textAlign: 'left' }} onClick={() => choose(onLeave)}>Sair do grupo</button>
+          )}
+          <div style={{ height: 8 }} />
+          {isOwner && (
+            <button
+              className="button text"
+              style={{ width: '100%', textAlign: 'left', opacity: 0.9 }}
+              onClick={() => { setOpen(false); alert('Não implementado'); }}
+            >
+              Fazer fechamento — Não implementado
+            </button>
+          )}
+          <button
+            className="button text"
+            style={{ width: '100%', textAlign: 'left', opacity: 0.9 }}
+            onClick={() => { setOpen(false); alert('Não implementado'); }}
+          >
+            Visualizar fechamento — Não implementado
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function useAuthHeaders() {
   // Se você vier a usar JWT no futuro, isso já deixa pronto.
   const token = localStorage.getItem("auth_token");
@@ -216,17 +283,7 @@ export default function ProfilePage() {
         onNotification={() => navigate('/notifications')}
         notificationCount={unreadCount}
       />
-      <style>{`
-        .card .icon-btn span[aria-label] { display: none !important; }
-      `}</style>
-      <style>{`
-        span[aria-label="Abrir"],
-        span[aria-label="Convidar"],
-        span[aria-label="Excluir"],
-        span[aria-label="Sair"] {
-          display: none !important;
-        }
-      `}</style>
+      {/* Ações agora estão no menu sanduíche */}
 
       {user && (
         <div className="card" style={{ marginBottom: 16 }}>
@@ -290,6 +347,15 @@ export default function ProfilePage() {
                   </div>
                 </div>
                 {/* Novo layout vertical de ícones com tooltip */}
+                <GroupActionsMenu
+                  group={g}
+                  onOpen={() => openGroup(g)}
+                  onInvite={() => invite(g)}
+                  onEdit={() => edit(g)}
+                  onDelete={() => handleDelete(g.id)}
+                  onLeave={() => handleLeave(g.id)}
+                />
+                {false && (
                 <div
                   style={{
                     display: "flex",
@@ -345,6 +411,7 @@ export default function ProfilePage() {
                     </Tooltip>
                   )}
                 </div>
+                )}
               </div>
               {g.description && <div style={{ opacity: 0.9 }}>{g.description}</div>}
             </div>

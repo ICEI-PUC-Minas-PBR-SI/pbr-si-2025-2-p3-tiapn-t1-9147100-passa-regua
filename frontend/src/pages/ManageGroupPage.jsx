@@ -3,16 +3,6 @@ import Avatar from '../components/Avatar.jsx';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Header, { Icon } from '../components/Header.jsx';
 
-const initialMembers = [
-  { id: 1, name: 'Ana',  balance: -50, isAdmin: true },
-  { id: 2, name: 'João', balance: -30, isAdmin: false },
-  { id: 3, name: 'Maria',balance:  90, isAdmin: false },
-];
-
-const initialExpenses = [
-  { id: 1, title: 'Desp 1', amount: 55, liked: false },
-  { id: 2, title: 'Desp 2', amount: 56, liked: false },
-];
 
 /* Ícone de joinha (preenchido quando filled=true) */
 function LikeIcon({ filled = false }) {
@@ -241,7 +231,7 @@ export default function ManageGroupPage() {
               aria-haspopup="menu"
               aria-expanded={openMenuFor === m.id}
               title="Menu"
-              style={{ marginLeft: 8 }}
+              style={{ fontSize: 20, lineHeight: 1 }}
             >
               ≡
             </button>
