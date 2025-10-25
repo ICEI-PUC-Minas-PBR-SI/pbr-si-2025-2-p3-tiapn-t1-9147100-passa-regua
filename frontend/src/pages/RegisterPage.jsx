@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import CloseButton from '../components/CloseButton';
+// padroniza topo com barra e seta voltar
 
 /**
  * RegisterPage allows new users to create an account. It mirrors
@@ -19,8 +19,6 @@ export default function RegisterPage() {
   const [age, setAge] = useState('');
   const [error, setError] = useState('');
 
-
-  const [isCallingAPI, setIsCallingAPI] = useState(false);
   const handleSubmit2 = async (e) => {
     e.preventDefault();
     setError('');
@@ -38,8 +36,6 @@ export default function RegisterPage() {
         setError('As senhas nao coincidem.');
         return;
       }
-      setIsCallingAPI(true);
-
       const res = await fetch('/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -71,8 +67,6 @@ export default function RegisterPage() {
       navigate('/verify-code', { state: { method: 'email' } });
     } catch (err) {
       setError(err.message);
-    } finally {
-      setIsCallingAPI(false);
     }
   };
 
@@ -100,8 +94,11 @@ export default function RegisterPage() {
 
   return (
     <div className="auth-container" style={{ position: 'relative' }}>
-      <CloseButton onClick={() => navigate('/login')} />
-      <h1>Criar uma conta</h1>
+      <div className="section-bar flush">
+        <button className="icon-btn" onClick={() => navigate('/login')} aria-label="Voltar"></button>
+        <div className="section-title">Criar uma conta</div>
+        <div style={{ width: 34 }} />
+      </div>
       {error && <div className="error-message">{error}</div>}
       <form onSubmit={handleSubmit2}>
         <div className="input-field">
@@ -179,16 +176,9 @@ export default function RegisterPage() {
             </select>
           </div>
         </div>
-        <button type="submit" className="button" disabled={isCallingAPI}>
-          {isCallingAPI ? (
-            <>
-              <span className="spinner"></span> Cadastrando...
-            </>
-          ) : (
-            'Cadastrar'
-          )}
+        <button type="submit" className="button">
+          Cadastrar
         </button>
-
       </form>
       <div className="small-link">
         Ao assinar, você concorda com os <a href="#">termos de serviço</a> e
@@ -201,3 +191,4 @@ export default function RegisterPage() {
     </div>
   );
 }
+

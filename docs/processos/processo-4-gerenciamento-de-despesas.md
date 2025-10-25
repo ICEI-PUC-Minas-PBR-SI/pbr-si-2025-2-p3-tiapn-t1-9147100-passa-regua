@@ -5,7 +5,6 @@
 O processo de **Gerenciamento de Despesas** tem início quando o usuário acessa e visualiza o grupo ao qual pertence.
 A partir daí, ele pode **incluir novas despesas, consultar lançamentos existentes, validar valores registrados por outros participantes e realizar abatimentos conforme os pagamentos são efetuados**.
 O processo é finalizado quando **os membros do grupo recebem um e-mail notificando a criação da despesa ou do abatimento**, o que assegura centralização, transparência e rastreabilidade das informações financeiras, além de reduzir conflitos e simplificar a divisão dos gastos.
----
 
 #### Modelagem
 
@@ -96,9 +95,8 @@ O processo é finalizado quando **os membros do grupo recebem um e-mail notifica
 **Descrição:** Tela que centraliza a visualização do grupo, exibindo membros, despesas lançadas e saldo de cada participante.  
 
 <div style="display: flex; gap: 20px;">
-  <img src="../images/prototipoTelas/processo4/Visualização_Grupo.png" alt="Tela de Visualização do Grupo" width="45%">
+  <img src="../images/prototipoTelas/gerenciarGrupos/Atividade-3.png" alt="Tela de Visualização do Grupo" width="45%">
 </div>
-
 **Requisitos Atendidos:**
 - **RF-002**: Permite gerenciamento de grupos de despesas.  
 - **RF-007**: Mostra a divisão automática das despesas entre os membros.  

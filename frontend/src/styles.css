@@ -25,9 +25,15 @@ body {
 }
 
 /* Container for mobile-like card */
+/*
+ * The auth-container provides a centered, card-like wrapper for all pages. We
+ * increase the max-width slightly for a more spacious layout and leave width
+ * at 100% to ensure consistency across pages. A subtle shadow and rounded
+ * corners complete the minimalistic appearance.
+ */
 .auth-container {
   width: 100%;
-  max-width: 420px;
+  max-width: 480px;
   background-color: #ffffff;
   border-radius: 8px;
   padding: 2rem;
@@ -246,18 +252,15 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #f2f2f2;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 8px 10px;
-  margin: 6px 0 10px;
+  background: #faf7fa; /* sutil destaque */
+  border: 1px solid #f0e3ea;
+  border-left: 3px solid var(--primary-color);
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin: 10px 0 8px;
 }
 
-.section-title {
-  font-weight: 700;
-  flex: 1;
-  text-align: center;
-}
+.section-title { font-weight: 700; flex: 1; text-align: left; color: #333; letter-spacing: .2px; }
 
 /* linhas e itens */
 .row { display: flex; padding: 10px 0; }
@@ -296,26 +299,27 @@ body {
 }
 .like-btn.liked { background: #fff7d1; border-color: #f0c04a; color: #f0b90b; } /* amarelinho */
 
-/* barra cinza ocupando toda a largura do card */
+/* seção: cabeçalho leve e destacado */
 .section-bar {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #f2f2f2;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 8px 10px;
-  margin: 6px 0 10px;
+  background: #faf7fa;
+  border: 1px solid #f0e3ea;
+  border-left: 4px solid var(--primary-color);
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin: 10px 0 8px;
 }
 .section-bar.flush {
-  /* estica horizontalmente até as bordas do card */
-  margin-left: -2rem;
-  margin-right: -2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
   border-radius: 0;
 }
-.section-title { font-weight: 700; flex: 1; text-align: center; }
+
+.section-title { font-weight: 700; flex: 1; text-align: left; color: #333; letter-spacing: .2px; }
 
 /* linhas e itens */
 .row { display: flex; padding: 10px 0; }
@@ -358,12 +362,13 @@ body {
 .menu-item:hover { background: #f7f7f7; }
 /* estica a faixa cinza até as bordas do card */
 .section-bar.flush {
-  margin-left: -2rem;
-  margin-right: -2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
   border-radius: 0;
 }
+
 
 /* botão + roxo */
 .icon-btn--primary {
@@ -410,43 +415,78 @@ body {
   margin-left: 8px;
 }
 
-/* RegisterPage.css */
-
-/* Spinner styles */
-.spinner {
-  width: 16px;
-  height: 16px;
-  border: 2px solid #fff;        /* Spinner color */
-  border-top: 2px solid transparent;
-  border-radius: 50%;
-  display: inline-block;
-  animation: spin 0.8s linear infinite;
-  margin-right: 8px;
+/* =============================================================
+ * Page header styles
+ *
+ * A reusable header component sits at the top of each page. It
+ * horizontally aligns a back/exit button, a central title and optional
+ * actions such as edit or notifications. Placeholders ensure the
+ * content remains centered even when some slots are empty. See
+ * components/Header.jsx for details.
+ */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  position: relative;
 }
 
-/* Keyframes for spinning */
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+.header-title {
+  flex: 1;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25rem;
 }
 
-/* Button styling (optional) */
-.button {
-  background-color: #007bff;
-  color: white;
+.header-btn {
+  background: none;
   border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+  padding: 0.25rem;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  color: #555;
 }
 
-.button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+.header-btn:hover {
+  background: #f2f2f2;
+}
+
+.header-placeholder {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+/* Notification badge displayed on the bell icon */
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(30%, -30%);
+  background: var(--error-color);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.6rem;
+  min-width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2px;
+}
+
+/* Generic card styling used in profile and notifications listings */
+.card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }

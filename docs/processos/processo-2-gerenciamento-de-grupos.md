@@ -10,13 +10,12 @@ Possui as atividades de usuário
 - 1 - Visualizar grupo
 - 2 - Criar novo grupo ou editar um grupo existente
 - 3 - Abrir um grupo onde é possivel gerenciar os membros e as depesas do grupo
-- 4 - Visualizar fechamanto, quando as despesas já estão consolidadas essa tela é responsavel por mostrar o que o usuário deve ou tem para receber quem está devendo ou pra quem o usuário precisa pagar
-- 5 - Visualizar notificação que é onde concentra todas as notificações que o sistema irá emitir.
+- 4 - Visualizar notificação que é onde concentra todas as notificações que o sistema irá emitir.
 
 Possui os subprocessos
 - Gerenciar Membros (processo 3)
 - Gerenciar Despesas (processo 4)
-- Abater pagamento (processo 5)
+- Gerenciar Fechamento e Abatimentos (processo 5)
 
 #### Modelagem
 ![PROCESSO 2](../images/modelagem-2-gerenciamento-de-grupo.png "Modelo BPMN do Processo 2.")
@@ -44,7 +43,7 @@ Possui os subprocessos
 | ---             | ---             | ---                           | ---               |
 | Nome do Grupo   | Caixa de texto  | obrigatório; 3–60 caracteres  |                   |
 | Descrição       | Área de texto   | até 500 caracteres            |                   |
-| Imagem capa     | Imagem          | opcional; até 5 MB            |                   |
+|
 
 | **Comandos**  | **Destino**                 | **Tipo** |
 | ---           | ---                         | ---      |
@@ -61,19 +60,10 @@ Possui os subprocessos
 
 Os demais comandos dessa tela estão nos processos (3 - Gerenciar membros) e (4 - Gerenciar despesas)
 
----
-
-**Atividade 4. Visualizar fechamento**
-
-| **Comandos**             | **Destino**                   | **Tipo**   |
-| ---                      | ---                           | ---        |
-| Pagar                    | Abater pagamento (processo 5) |            |
-| Recebido / Não recebido  | Nenhum                        |            |
-| Voltar <                 | 1. Visualizar grupos          | cancel     |
 
 ---
 
-**Atividade 5. Visualizar notificações**
+**Atividade 4. Visualizar notificações**
 
 | **Comandos**               | **Destino**                   | **Tipo**   |
 | ---                        | ---                           | ---        |
@@ -85,10 +75,10 @@ Os demais comandos dessa tela estão nos processos (3 - Gerenciar membros) e (4 
 
 #### Wireframes
   
-| **Atividade 1**|  **Atividade 2** |  **Atividade 3** |
-| ---            | ---              | ---              |
-|  <img src="../images/prototipoTelas/gerenciarGrupos/Atividade-1.png" alt="Visualizar grupos" >| <img src="../images/prototipoTelas/gerenciarGrupos/Atividade-2.png" alt="Criar novo grupo / Editar"  > |<img src="../images/prototipoTelas/gerenciarGrupos/Atividade-3.png" alt="Abrir grupo" > |
+| **Atividade 1**|  **Atividade 2** |  
+| ---            | ---              |
+|  <img src="../images/prototipoTelas/gerenciarGrupos/Atividade-1.png" alt="Visualizar grupos" >| <img src="../images/prototipoTelas/gerenciarGrupos/Atividade-2.png" alt="Criar novo grupo / Editar"  > |
 
-| **Atividade 4**|  **Atividade 5** |  
+| **Atividade 3**|  **Atividade 4** |  
 | ---            | ---              | 
-|  <img src="../images/prototipoTelas/gerenciarGrupos/Atividade-4.png" alt="Visualizar fechamento" >| <img src="../images/prototipoTelas/gerenciarGrupos/Atividade-5.png" alt="Visualizar notificações" > |                                                           
+|  <img src="../images/prototipoTelas/gerenciarGrupos/Atividade-3.png" alt="Abrir grupo" > | <img src="../images/prototipoTelas/gerenciarGrupos/Atividade-5.png" alt="Visualizar notificações" > |                                                           

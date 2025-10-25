@@ -68,7 +68,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-001| O sistema deve permitir que o usuário crie uma conta e faça login com validação de e-mail.  | ALTA       |
 |RF-002| O sistema deve permitir a criação de grupos de despesas e o gerenciamento por administradores.         | ALTA       |
 |RF-003| O sistema deve permitir enviar convites para inclusão de membros no grupo, com aceite ou recusa.                | ALTA       |
-|RF-004| O sistema deve permitir a inclusão de participantes não cadastrados, com opção de substituição futura. | MÉDIA      |
+|RF-004| O sistema deve permitir a inclusão de participantes não cadastrados com link. | MÉDIA      |
 |RF-005| O sistema deve permitir o registro das despesas com anexos e submetê-las à aprovação do administrador.               | ALTA       |
 |RF-006| O sistema deve enviar notificações automáticas sobre aprovações, reprovações e alterações de despesas. | ALTA       |
 |RF-007| O sistema deve calcular automaticamente a divisão das despesas entre os membros do grupo.              | ALTA       |
