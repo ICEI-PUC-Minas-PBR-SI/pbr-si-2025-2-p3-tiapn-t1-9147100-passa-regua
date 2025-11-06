@@ -1,18 +1,18 @@
 // src/App.jsx
-import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 import LoginPage from './pages/LoginPage';
+import ManageGroupPage from './pages/ManageGroupPage';
 import RegisterPage from './pages/RegisterPage';
 import VerifyCodePage from './pages/VerifyCodePage';
-import ManageGroupPage from './pages/ManageGroupPage';
 
-import ProfilePage from './pages/ProfilePage';
 import CreateGroupPage from './pages/CreateGroupPage';
-import InviteMembersPage from './pages/InviteMembersPage';
-import InviteAcceptPage from './pages/InviteAcceptPage';
 import EditGroupPage from './pages/EditGroupPage'; // <-- NOVO
+import IncluirDespesa from './pages/IncluirDespesas.jsx';
+import InviteAcceptPage from './pages/InviteAcceptPage';
+import InviteMembersPage from './pages/InviteMembersPage';
 import NotificationsPage from './pages/NotificationsPage.jsx';
+import ProfilePage from './pages/ProfilePage';
 
 export default function App() {
   return (
@@ -32,6 +32,8 @@ export default function App() {
       <Route path="/invite/:inviteId" element={<InviteAcceptPage />} />
       <Route path="/groups/:id/edit" element={<EditGroupPage />} /> {/* <-- NOVA ROTA */}
       <Route path="/notifications" element={<NotificationsPage />} />
+
+      <Route path="/incluir-despesa/:id" element={<IncluirDespesa />} />
 
       {/* se você já usa essa tela */}
       <Route path="/manage-group" element={<ManageGroupPage />} />

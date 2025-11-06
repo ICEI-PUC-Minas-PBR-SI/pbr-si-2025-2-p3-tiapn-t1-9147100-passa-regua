@@ -39,6 +39,8 @@ body {
   padding: 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-top: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .auth-container h1 {
@@ -489,4 +491,98 @@ body {
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.incluir-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f6f6f6;
+  font-family: Arial, sans-serif;
+}
+
+.incluir-header {
+  width: 100%;
+  background-color: #e0e0e0;
+  padding: 12px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.incluir-header h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.back-btn {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.incluir-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.incluir-form input[type="text"],
+.incluir-form input[type="number"] {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.file-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn-file {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-file:hover {
+  background-color: #d6d6d6;
+}
+
+.btn-submit {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: #333;
 }

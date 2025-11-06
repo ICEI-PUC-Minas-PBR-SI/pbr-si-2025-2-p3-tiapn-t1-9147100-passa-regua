@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
-import Avatar from '../components/Avatar.jsx';
+import { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import Avatar from '../components/Avatar.jsx';
 import Header, { Icon } from '../components/Header.jsx';
+import { despesasModule } from '../services/despesasService';
 
 
 /* Ícone de joinha (preenchido quando filled=true) */
@@ -40,7 +41,7 @@ export default function ManageGroupPage() {
   const [error, setError] = useState('');
 
   const [members, setMembers]   = useState([]);
-  const [expenses, setExpenses] = useState([]);
+  const { expenses, toggleLike, addExpense } = despesasModule(setLoading, setError, groupId);
 
   const [openMenuFor, setOpenMenuFor] = useState(null);
   const menuRef = useRef(null);
@@ -87,6 +88,7 @@ export default function ManageGroupPage() {
   // Carrega membros reais do grupo
   useEffect(() => {
     let alive = true;
+
     async function loadMembers() {
       if (!groupId) return;
       try {
@@ -159,16 +161,7 @@ export default function ManageGroupPage() {
     navigate(`/invite-members?id=${groupId}`, { state: { groupId } });
   };
 
-  // despesas
-  const addExpense = () => {
-    const title = prompt('Descrição da despesa:');
-    const raw = prompt('Valor (R$):');
-    const amount = Number(String(raw || '').replace(',', '.'));
-    if (!title || isNaN(amount)) return;
-    setExpenses(prev => [...prev, { id: Date.now(), title, amount, liked: false }]);
-  };
-  const toggleLike = (eid) =>
-    setExpenses(prev => prev.map(e => (e.id === eid ? { ...e, liked: !e.liked } : e)));
+
 
   if (loading) {
     return (
@@ -254,20 +247,20 @@ export default function ManageGroupPage() {
       {/* Faixa cinza: Despesas + + */}
       <div className="section-bar flush" style={{ marginTop: 14 }}>
         <span className="section-title">Despesas</span>
-        <button className="icon-btn" onClick={addExpense} title="Nova despesa">
+        <button className="icon-btn" onClick={() => navigate('/incluir-despesa/' + groupId, { replace: true }) } title="Nova despesa">
           <Icon type="plus" />
         </button>
       </div>
 
       {/* Lista de despesas */}
       <div>
-        {expenses.map(e => (
+        {expenses && expenses.map(e => (
           <div key={e.id} className="row line" style={{ alignItems: 'center' }}>
-            <div style={{ flex: 1 }}>{e.title}</div>
+            <div style={{ flex: 1 }}>{e.descricao}</div>
 
             {/* valor negativo (wireframe) */}
             <div style={{ minWidth: 120, textAlign: 'right', color: '#d32f2f', fontWeight: 700 }}>
-              R$ -{e.amount.toFixed(2)}
+              R$ -{e.valor.toFixed(2)}
             </div>
 
             {/* joinha preenchível (sem quadrado) */}
@@ -283,6 +276,8 @@ export default function ManageGroupPage() {
           </div>
         ))}
       </div>
+
+      <button className="button mt-auto">Passar Régua</button>
     </div>
   );
 }

@@ -132,7 +132,7 @@ public class AuthService {
             throw new ResponseStatusException(HttpStatus.FORBIDDEN, "2FA pendente");
         }
         // Sem JWT por simplicidade
-        return LoginResponse.builder().message("Login efetuado").build();
+        return LoginResponse.builder().message("Login efetuado").token(u.getId() + "").build();
     }
 
     private String hash(String senha) {
