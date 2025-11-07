@@ -1,5 +1,6 @@
 package com.passaregua.app.controllers;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.passaregua.app.dtos.auth.*;
 import com.passaregua.app.services.AuthService;
 import jakarta.servlet.http.HttpSession;
@@ -39,15 +40,13 @@ public class AuthController {
         authService.verifyCode(req);
     }
 
-    // LOGIN: grava apenas o e-mail na HttpSession
     @PostMapping("/login")
-    public LoginResponse login(@Valid @RequestBody LoginRequest req, HttpSession session) {
+    public LoginResponse login(@Valid @RequestBody LoginRequest req, HttpSession session) throws JsonProcessingException {
         LoginResponse resp = authService.login(req);
-        session.setAttribute("USUARIO_EMAIL", req.getEmail()); // suficiente para /me
+        session.setAttribute("USUARIO_EMAIL", req.getEmail());
         return resp;
     }
 
-    // PERFIL: responde 200 se tiver e-mail na sessão
     @GetMapping("/me")
     public ResponseEntity<?> me(HttpSession session) {
         Object email = session.getAttribute("USUARIO_EMAIL");

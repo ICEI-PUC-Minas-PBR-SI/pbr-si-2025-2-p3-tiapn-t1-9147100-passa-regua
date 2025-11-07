@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { useNavigate, useParams } from "react-router-dom";
 import Header from '../components/Header.jsx';
 
 import { despesasModule } from '../services/despesasService';
@@ -9,6 +9,8 @@ export default function IncluirDespesa() {
   const [descricao, setDescricao] = useState("");
   const [valor, setValor] = useState("");
   const [anexo, setAnexo] = useState(null);
+  const navigate = useNavigate();
+  const params = useParams();
 
   const { addExpense } = despesasModule(null, null);
 
@@ -24,7 +26,7 @@ export default function IncluirDespesa() {
 
   
   function safeBack() {
-    if (window.history.length > 1) navigate(-1); else navigate('/profile');
+    navigate('/manage-group?id=' + params.id);
   }
 
   return (
@@ -82,6 +84,16 @@ export default function IncluirDespesa() {
         <button type="submit" className="btn-submit">
           Incluir
         </button>
+
+        {
+          anexo && <>
+          <h1>Item Anexado</h1>
+        {
+          anexo.name
+        }
+          </>
+        }
+        
       </form>
     
     </div>

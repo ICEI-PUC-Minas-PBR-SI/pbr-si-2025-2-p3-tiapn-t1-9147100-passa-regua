@@ -1,5 +1,8 @@
 package com.passaregua.app.services;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.MapperFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.passaregua.app.dtos.auth.*;
 import com.passaregua.app.models.*;
 import com.passaregua.app.repositories.UsuarioRepository;
@@ -120,7 +123,7 @@ public class AuthService {
     }
 
     @Transactional(readOnly = true)
-    public LoginResponse login(LoginRequest req) {
+    public LoginResponse login(LoginRequest req) throws JsonProcessingException {
         Optional<Usuario> opt = repository.findByEmail(req.getEmail());
         Usuario u = opt.orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Credenciais invalidas"));
 
@@ -131,8 +134,12 @@ public class AuthService {
         if (Boolean.FALSE.equals(u.getTwoFactorVerified())) {
             throw new ResponseStatusException(HttpStatus.FORBIDDEN, "2FA pendente");
         }
-        // Sem JWT por simplicidade
-        return LoginResponse.builder().message("Login efetuado").token(u.getId() + "").build();
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.disable(MapperFeature.REQUIRE_HANDLERS_FOR_JAVA8_TIMES);
+
+        String userObject = objectMapper.writeValueAsString(u);
+
+        return LoginResponse.builder().message("Login efetuado").token(userObject).build();
     }
 
     private String hash(String senha) {

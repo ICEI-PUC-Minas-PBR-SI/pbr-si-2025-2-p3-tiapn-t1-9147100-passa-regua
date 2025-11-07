@@ -27,7 +27,7 @@ export default function ManageGroupPage() {
   const navigate = useNavigate();
 
   function safeBack() {
-    if (window.history.length > 1) navigate(-1); else navigate('/profile');
+    navigate('/profile');
   }
 
   // Resolve groupId: param -> state -> querystring (?id=)
@@ -41,7 +41,7 @@ export default function ManageGroupPage() {
   const [error, setError] = useState('');
 
   const [members, setMembers]   = useState([]);
-  const { expenses, toggleLike, addExpense } = despesasModule(setLoading, setError, groupId);
+  const { expenses, toggleLike, addExpense } = despesasModule(setLoading, setError, groupId, members);
 
   const [openMenuFor, setOpenMenuFor] = useState(null);
   const menuRef = useRef(null);

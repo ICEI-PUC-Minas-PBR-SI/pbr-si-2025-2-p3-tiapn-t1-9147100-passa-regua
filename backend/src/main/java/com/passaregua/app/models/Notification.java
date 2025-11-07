@@ -11,6 +11,15 @@ import java.time.Instant;
 })
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class Notification {
+    public Notification(String userEmail, String type, String title, String message, Long groupId, String actorEmail) {
+        this.userEmail = userEmail;
+        this.type = type;
+        this.title = title;
+        this.message = message;
+        this.groupId = groupId;
+        this.actorEmail = actorEmail;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -39,7 +48,7 @@ public class Notification {
     @Column(name = "actor_email", length = 150)
     private String actorEmail; // who generated
 
-    @Column(name = "created_at", nullable = false)
+    @Column(name = "created_at")
     private Instant createdAt;
 
     @Column(name = "read_at")

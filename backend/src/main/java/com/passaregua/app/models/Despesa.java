@@ -9,6 +9,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "despesas")
@@ -62,5 +63,10 @@ public class Despesa {
         this.descricao = descricao;
         this.valor = valor;
     }
+
+    private List<String> outrosMembros;
+
+    private String nomeCadastrante;
+    private String emailCadastrante;
 
 }

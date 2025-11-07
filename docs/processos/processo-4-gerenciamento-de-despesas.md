@@ -84,8 +84,7 @@ O processo é finalizado quando **os membros do grupo recebem um e-mail notifica
 </div>
 
 **Requisitos Atendidos:**
-- **RF-005**: Permite registrar despesas com anexos e submetê-las à aprovação do administrador.  
-- **RF-007**: A inclusão de despesas alimenta automaticamente o cálculo de rateio.  
+- **RF-005**: Permite registrar despesas com anexos.  
 - **RNF-008**: A interface é simples e direta, adequada a usuários não técnicos.  
 
 ---

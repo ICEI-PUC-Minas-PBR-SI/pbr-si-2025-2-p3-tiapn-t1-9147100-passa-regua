@@ -2,7 +2,9 @@ package com.passaregua.app.services;
 
 import com.passaregua.app.models.Despesa;
 import com.passaregua.app.enums.StatusDespesa;
+import com.passaregua.app.models.Notification;
 import com.passaregua.app.repositories.DespesasRepository;
+import com.passaregua.app.repositories.NotificationRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,10 +14,14 @@ import java.util.Optional;
 @Service
 public class DespesasService {
 
+    private final UsuarioService usuarioService;
     private final DespesasRepository despesasRepository;
+    private final NotificationRepository notificationRepository;
 
-    public DespesasService(DespesasRepository despesasRepository) {
+    public DespesasService(UsuarioService usuarioService, DespesasRepository despesasRepository, NotificationRepository notificationRepository) {
+        this.usuarioService = usuarioService;
         this.despesasRepository = despesasRepository;
+        this.notificationRepository = notificationRepository;
     }
 
     // -----------------------------------------------------
@@ -40,7 +46,13 @@ public class DespesasService {
 
     @Transactional
     public Despesa salvar(Despesa despesa) {
-        return despesasRepository.save(despesa);
+        var despesaSalva = despesasRepository.save(despesa);
+        var nomeCadastrante = despesa.getNomeCadastrante();
+        for (int i = 0; i < despesa.getOutrosMembros().size(); i++) {
+            var outros = despesa.getOutrosMembros().get(i);
+            notificationRepository.save(new Notification(outros, "CRIACAO_DESPESA", nomeCadastrante + " criou nova despesa", "Nova despesa criada - Descrição: " + despesa.getDescricao() + " Valor: " + despesa.getValor(), despesa.getIdGrupo(), despesa.getEmailCadastrante()));
+        }
+        return despesaSalva;
     }
 
     @Transactional

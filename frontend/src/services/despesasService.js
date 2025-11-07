@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { addDespesaPorGrupo, listarDespesasPorGrupo } from "../repository/despesasRepository";
+import { addDespesaPorGrupo, listarDespesasPorGrupo, loadMembers } from "../repository/despesasRepository";
 
 export const despesasModule = (setLoading = () => null, setError = () => null, groupIdOuter) => {
   const [groupId, setGroupId] = useState(groupIdOuter); 
@@ -25,7 +25,8 @@ export const despesasModule = (setLoading = () => null, setError = () => null, g
 
     
   const addExpense = async (descricao, valor) => {
-    await addDespesaPorGrupo(groupId || params.id, valor, descricao);
+    const members = await loadMembers(navigate, groupId || params.id);
+    await addDespesaPorGrupo(groupId || params.id, valor, descricao, members);
     navigate(`/manage-group?id=${groupId || params.id}`)
   };
 
