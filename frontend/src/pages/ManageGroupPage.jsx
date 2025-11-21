@@ -120,6 +120,7 @@ export default function ManageGroupPage() {
     loadMembers();
     return () => { alive = false; };
   }, [groupId, navigate]);
+  
 
   // membros - backend
   const toggleAdmin = async (memberIdOrEmail) => {
