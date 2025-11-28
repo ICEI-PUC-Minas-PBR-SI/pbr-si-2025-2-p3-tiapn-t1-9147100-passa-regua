@@ -36,12 +36,21 @@ _Descrição da tela relativa à atividade 2._
 
 ## 6.3. Telas do processo 2
 
-_Descrição da tela relativa à atividade 1._
+- Tela de gerenciamento dos grupos: A tela permite visualizar detalhes individuais, acompanhar valores devidos ou a receber, acessar ações rápidas como abrir, editar ou fechar grupos, além de consultar notificações e marcá-las como lidas ou não lidas.
+<img width="361" height="702" alt="image" src="https://github.com/user-attachments/assets/3f84c460-1f60-4b97-97ec-471e57e9e0fe" /><img width="349" height="684" alt="image" src="https://github.com/user-attachments/assets/b23c47e1-3b2a-4960-970a-3436686c636a" />
 
-[`Tela da atividade 1`](images/)
 
-_Descrição da tela relativa à atividade 2._
 
-[`Tela da atividade 2`](images/)
 
+
+## 6.4. Telas do processo 3
+- Telas de gerenciamento de membros: As telas abaixo, representam visualmente o processo de gerenciamento dos membros presentes a um grupo. Por meio desta, se torna possível convidar, expulsar, promover ou visualizar detalhas dos membros, como suas despesas.
+<img width="348" height="696" alt="image" src="https://github.com/user-attachments/assets/d440e918-0187-4595-974e-ab1fe32d22a1" /><img width="346" height="692" alt="image" src="https://github.com/user-attachments/assets/c9c90273-8d7f-4288-ba12-4f67d93644a5" />
+
+
+
+
+## 6.5. Telas do processo 4
+
+## 6.5. Telas do processo 5
 
