@@ -58,7 +58,7 @@ As telas ilustram os caminhos essenciais para:
 
 ### Tela 1 — Criar Conta
 - **Descrição:** Formulário de criação de conta com nome, e-mail, senha e confirmação.
-- **Funcionalidades:** Cadastro de usuário, validação, envio de código.
+- **Funcionalidades:** Cadastro de usuário.
 - **Requisitos atendidos:** RF-001, RF-005, RNF-004, RNF-008.
 
 ### Tela 2 — Seleção do Método de Verificação (2FA)
@@ -130,9 +130,7 @@ Group agrega membros, despesas, convites e notificações. As enums Genero, TwoF
 
 ### 4.3. Modelo de dados
 
-O desenvolvimento da solução proposta requer a existência de bases de dados que permitam efetuar os cadastros de dados e controles associados aos processos identificados, assim como recuperações.
-Utilizando a notação do DER (Diagrama Entidade e Relacionamento), elaborem um modelo, na ferramenta visual indicada na disciplina, que contemple todas as entidades e atributos associados às atividades dos processos identificados. Deve ser gerado um único DER que suporte todos os processos escolhidos, visando, assim, uma base de dados integrada. O modelo deve contemplar, também, o controle de acesso de usuários (partes interessadas dos processos) de acordo com os papéis definidos nos modelos do processo de negócio.
-_Apresente o modelo de dados por meio de um modelo relacional que contemple todos os conceitos e atributos apresentados na modelagem dos processos._
+O diagrama relacional representa a estrutura lógica do banco de dados do sistema Passa Régua. Nele são exibidas as tabelas principais — usuarios, groups, group_members, despesas, friendships, invites e notifications — juntamente com suas chaves primárias e estrangeiras, evidenciando como cada entidade se relaciona dentro do modelo. As relações incluem criação e participação em grupos, registro de despesas, convites, amizades e notificações, permitindo visualizar de forma clara o fluxo de dados entre usuários e grupos. Esse diagrama auxilia na compreensão da arquitetura do banco e garante integridade entre as operações realizadas na aplicação.
 
 #### 4.3.1 Modelo ER
 
