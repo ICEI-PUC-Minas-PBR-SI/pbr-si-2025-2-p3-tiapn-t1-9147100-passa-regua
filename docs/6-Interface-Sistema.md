@@ -5,6 +5,8 @@
 
 _Visão geral da interação do usuário por meio das telas do sistema. Apresente as principais interfaces da plataforma._
 
+<a href:"docs/processos">Telas (Wireframes) e especificação dos requisitos funcionais embasados aos usuários do sistema.</a>
+
 ## 6.1. Tela principal do sistema
 
 _Descrição da tela principal do sistema._
