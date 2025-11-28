@@ -46,7 +46,8 @@ _Descrição da tela relativa à atividade 2._
 
 ## 6.4. Telas do processo 3
 - Telas de gerenciamento de membros: As telas abaixo, representam visualmente o processo de gerenciamento dos membros presentes a um grupo. Por meio desta, se torna possível convidar, expulsar, promover ou visualizar detalhas dos membros, como suas despesas.
-<img width="348" height="696" alt="image" src="https://github.com/user-attachments/assets/d440e918-0187-4595-974e-ab1fe32d22a1" /><img width="346" height="692" alt="image" src="https://github.com/user-attachments/assets/c9c90273-8d7f-4288-ba12-4f67d93644a5" />
+<img width="348" height="696" alt="image" src="https://github.com/user-attachments/assets/d440e918-0187-4595-974e-ab1fe32d22a1" /><img width="353" height="695" alt="image" src="https://github.com/user-attachments/assets/e9b7b188-aef4-4173-8146-d4912c775ff0" />
+
 
 
 
