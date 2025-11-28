@@ -23,7 +23,33 @@ A administração de finanças coletivas em viagens e eventos em grupo é, muita
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+### 1 Instação do Backend
+#### 1.1 Pré-requisitos
+1. Instalar o JAVA em https://www.oracle.com/br/java/technologies/downloads/#jdk23-windows
+2. Instalar as extensões no VSCode
+  * Extension Pack for Java
+  * Spring Boot Extension Pack
+  * Spring Boot Dashboard
+  * Lombok Annotation Support for VS Code
+#### 1.2 Execução
+1. Executar o Spring Boot em Run Debug ou em Spring Boot Dashboard Run
+
+### 2 Instalação do Front End
+####  2.1 Pré-requisitos
+- [Node.js LTS](https://nodejs.org/) (versão 20 ou superior)
+- npm (vem junto com o Node.js)
+####  2.2 Instalação
+Entre na pasta **frontend** do projeto e instale as dependências:
+Se ja estiver na pasta frontend rode apenas o npm install
+```bash
+cd frontend
+npm install
+```
+####  2.3 Execução
+```bash
+cd frontend
+npm run dev
+```
 
 # Documentação
 
