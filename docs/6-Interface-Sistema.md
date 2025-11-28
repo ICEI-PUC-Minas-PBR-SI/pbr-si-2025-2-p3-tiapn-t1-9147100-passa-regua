@@ -9,8 +9,6 @@ _Visão geral da interação do usuário por meio das telas do sistema. Apresent
 
 ## 6.1. Tela principal do sistema
 
-_Descrição da tela principal do sistema._
-
 [`Tela principal do sistema`](images/)
 
 - Tela subsequente a autenticação do usuário.
@@ -36,23 +34,20 @@ _Descrição da tela relativa à atividade 2._
 
 ## 6.3. Telas do processo 2
 
-- Tela de gerenciamento dos grupos: A tela permite visualizar detalhes individuais, acompanhar valores devidos ou a receber, acessar ações rápidas como abrir, editar ou fechar grupos, além de consultar notificações e marcá-las como lidas ou não lidas.
+- Gerenciamento dos grupos: A tela permite visualizar detalhes individuais, acompanhar valores devidos ou a receber, acessar ações rápidas como abrir, editar ou fechar grupos, além de consultar notificações e marcá-las como lidas ou não lidas.
 <img width="361" height="702" alt="image" src="https://github.com/user-attachments/assets/3f84c460-1f60-4b97-97ec-471e57e9e0fe" /><img width="355" height="696" alt="image" src="https://github.com/user-attachments/assets/9fbb8e3c-6276-4c8b-be0d-927c4322f5d5" />
 
 
-
-
-
-
 ## 6.4. Telas do processo 3
-- Telas de gerenciamento de membros: As telas abaixo, representam visualmente o processo de gerenciamento dos membros presentes a um grupo. Por meio desta, se torna possível convidar, expulsar, promover ou visualizar detalhas dos membros, como suas despesas.
+- Gerenciamento de membros: As telas abaixo, representam visualmente o processo de gerenciamento dos membros presentes a um grupo. Por meio desta, se torna possível convidar, expulsar, promover ou visualizar detalhas dos membros, como suas despesas.
 <img width="348" height="696" alt="image" src="https://github.com/user-attachments/assets/d440e918-0187-4595-974e-ab1fe32d22a1" /><img width="353" height="695" alt="image" src="https://github.com/user-attachments/assets/e9b7b188-aef4-4173-8146-d4912c775ff0" />
 
 
-
-
-
 ## 6.5. Telas do processo 4
+
+<img width="354" height="699" alt="image" src="https://github.com/user-attachments/assets/c3e6af78-a61e-42bc-aefa-7526eaa3db8a" /><img width="344" height="693" alt="image" src="https://github.com/user-attachments/assets/e9d8e050-556d-4703-96ec-84a2860428fb" />
+
+
 
 ## 6.5. Telas do processo 5
 
