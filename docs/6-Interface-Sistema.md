@@ -37,7 +37,8 @@ _Descrição da tela relativa à atividade 2._
 ## 6.3. Telas do processo 2
 
 - Tela de gerenciamento dos grupos: A tela permite visualizar detalhes individuais, acompanhar valores devidos ou a receber, acessar ações rápidas como abrir, editar ou fechar grupos, além de consultar notificações e marcá-las como lidas ou não lidas.
-<img width="361" height="702" alt="image" src="https://github.com/user-attachments/assets/3f84c460-1f60-4b97-97ec-471e57e9e0fe" /><img width="349" height="684" alt="image" src="https://github.com/user-attachments/assets/b23c47e1-3b2a-4960-970a-3436686c636a" />
+<img width="361" height="702" alt="image" src="https://github.com/user-attachments/assets/3f84c460-1f60-4b97-97ec-471e57e9e0fe" /><img width="355" height="696" alt="image" src="https://github.com/user-attachments/assets/9fbb8e3c-6276-4c8b-be0d-927c4322f5d5" />
+
 
 
 
