@@ -1,29 +1,29 @@
 cff-version: 1.0.1
-message: Please cite this software using these metadata.
-title: 
+message: "Por favor, cite este software usando os metadados abaixo."
+title: Passa Régua
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
+  - family-names: Maciel
+    given-names: Caio
+  - family-names: Ferreira
+    given-names: Nayara
+  - family-names: Andrade
+    given-names: Paulo
+  - family-names: Custodio
+    given-names: Rafael
+  - family-names: Rezende
+    given-names: Rodolfo
+  - family-names: Oliveira
+    given-names: Victor
 
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-    keywords:
-    - 
-repository-code: 
+    family-names: Amaral
+    given-names: Cleia
+    keywords: 
+    - Passa-Regua
+    - TIPN
+    - Processos de negócios
+repository-code: https://github.com/ICEI-PUC-Minas-PBR-SI/pbr-si-2025-2-p3-tiapn-t1-9147100-passa-regua
 license: CC-BY-4.0
 version: 1.0.0
-date-released:
+date-released: 2025-11-28
