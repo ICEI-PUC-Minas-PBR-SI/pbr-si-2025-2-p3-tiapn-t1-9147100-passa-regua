@@ -11,6 +11,8 @@ _Descrição da tela principal do sistema._
 
 [`Tela principal do sistema`](images/)
 
+Tela subsequente a autenticação do usuário. Exibição e detalhamento dos grupos que o usuário se vincula:
+<img width="870" height="755" alt="image" src="https://github.com/user-attachments/assets/4f175051-c85a-46c1-aa87-8a96061ad724" />
 
 ## 6.2. Telas do processo 1
 
