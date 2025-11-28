@@ -110,10 +110,12 @@ public class GroupService {
         // dono do grupo primeiro
         {
             String email = g.getOwnerEmail();
-            String name = usuarioRepository.findByEmail(email)
+            var user = usuarioRepository.findByEmail(email);
+            String name = user
                     .map(u -> (u.getPrimeiroNome() + " " + u.getUltimoNome()).trim())
                     .orElse(email);
             out.add(GroupMemberResponse.builder()
+                    .id(user.get().getId())
                     .email(email)
                     .name(name)
                     .role("OWNER")
@@ -124,10 +126,12 @@ public class GroupService {
         for (var m : memberRepo.findByGroupId(groupId)) {
             if (m.getMemberEmail().equalsIgnoreCase(g.getOwnerEmail())) continue;
             String email = m.getMemberEmail();
-            String name = usuarioRepository.findByEmail(email)
+            var usr = usuarioRepository.findByEmail(email);
+            String name = usr
                     .map(u -> (u.getPrimeiroNome() + " " + u.getUltimoNome()).trim())
                     .orElse(email);
             out.add(GroupMemberResponse.builder()
+                    .id(usr.get().getId())
                     .email(email)
                     .name(name)
                     .role(m.getRole() == null ? "MEMBER" : m.getRole())

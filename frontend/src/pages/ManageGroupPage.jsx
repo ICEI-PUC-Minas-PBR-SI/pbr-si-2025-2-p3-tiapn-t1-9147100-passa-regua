@@ -30,6 +30,18 @@ export default function ManageGroupPage() {
     navigate('/profile');
   }
 
+  function formatarNomeCompleto(nome) {
+    if (!nome || typeof nome !== 'string') return '';
+
+    return nome
+      .trim()
+      .toLowerCase()
+      .split(/\s+/)
+      .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
+      .join(' ');
+  }
+
+
   // Resolve groupId: param -> state -> querystring (?id=)
   const state = location.state || {};
   const qs = new URLSearchParams(location.search);
@@ -67,7 +79,7 @@ export default function ManageGroupPage() {
       setError('');
       try {
         const res = await fetch(`/api/groups/${groupId}`, { credentials: 'include' });
-        if (res.status === 401) {
+        if (res.status === 401 || res.status === 403) {
           navigate('/login', { replace: true });
           return;
         }
@@ -94,14 +106,14 @@ export default function ManageGroupPage() {
       try {
         const res = await fetch(`/api/groups/${groupId}/members`, { credentials: 'include' });
         if (!alive) return;
-        if (res.status === 401) {
+        if (res.status === 401 || res.status === 403) {
           navigate('/login', { replace: true });
           return;
         }
         if (res.ok) {
           const list = await res.json();
           const norm = (Array.isArray(list) ? list : []).map(m => ({
-            id: m.email || String(Math.random()),
+            id: m.id || String(Math.random()),
             name: m.name || m.email || 'Membro',
             email: m.email,
             role: m.role,
@@ -174,6 +186,18 @@ export default function ManageGroupPage() {
     );
   }
 
+  const getTotalExpensesByMember = (member) => {
+    let sum = 0;
+    expenses.forEach(expense => {
+      if (expense.idCriador == member.id)
+        sum += expense.valor
+    })
+    return `R$ ${sum.toFixed(2)}`
+  }
+
+  if (!members || !group)
+    return <div>Carregando</div>
+  else 
   return (
     <div
       className="auth-container"
@@ -216,7 +240,7 @@ export default function ManageGroupPage() {
                 fontWeight: 700
               }}
             >
-              {m.balance < 0 ? `R$ -${(-m.balance).toFixed(2)}` : `R$ ${m.balance.toFixed(2)}`}
+              {getTotalExpensesByMember(m)}
             </div>
 
             <button
@@ -259,6 +283,8 @@ export default function ManageGroupPage() {
           <div key={e.id} className="row line" style={{ alignItems: 'center' }}>
             <div style={{ flex: 1 }}>{e.descricao}</div>
 
+            <span style={{fontSize: "10px", opacity: "0.7"}}>{formatarNomeCompleto(members.find(({id}) =>  id === e.idCriador)?.name)}</span>
+
             {/* valor negativo (wireframe) */}
             <div style={{ minWidth: 120, textAlign: 'right', color: '#d32f2f', fontWeight: 700 }}>
               R$ -{e.valor.toFixed(2)}
@@ -278,7 +304,7 @@ export default function ManageGroupPage() {
         ))}
       </div>
 
-      <button className="button mt-auto">Passar Régua</button>
+      <button className="button mt-auto" onClick={() => navigate(`/passar-regua/${groupId}`, { state: { groupId } })}>Passar Régua</button>
     </div>
   );
 }

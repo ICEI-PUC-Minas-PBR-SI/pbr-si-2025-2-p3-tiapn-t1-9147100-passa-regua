@@ -8,6 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class GroupMemberResponse {
+    private long id;
     private String email;
     private String name;
     private String role; // OWNER, MEMBER, etc.

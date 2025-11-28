@@ -13,6 +13,7 @@ import InviteAcceptPage from './pages/InviteAcceptPage';
 import InviteMembersPage from './pages/InviteMembersPage';
 import NotificationsPage from './pages/NotificationsPage.jsx';
 import ProfilePage from './pages/ProfilePage';
+import CloseGroup from './pages/CloseGroup.jsx';
 
 export default function App() {
   return (
@@ -34,6 +35,8 @@ export default function App() {
       <Route path="/notifications" element={<NotificationsPage />} />
 
       <Route path="/incluir-despesa/:id" element={<IncluirDespesa />} />
+
+      <Route path="/passar-regua/:id" element={<CloseGroup />} />
 
       {/* se você já usa essa tela */}
       <Route path="/manage-group" element={<ManageGroupPage />} />

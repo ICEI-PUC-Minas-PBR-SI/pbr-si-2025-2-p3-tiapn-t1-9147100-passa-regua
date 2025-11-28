@@ -4,7 +4,7 @@
 
 O processo de **Gerenciamento de Despesas** tem início quando o usuário acessa e visualiza o grupo ao qual pertence.
 A partir daí, ele pode **incluir novas despesas, consultar lançamentos existentes, validar valores registrados por outros participantes e realizar abatimentos conforme os pagamentos são efetuados**.
-O processo é finalizado quando **os membros do grupo recebem um e-mail notificando a criação da despesa ou do abatimento**, o que assegura centralização, transparência e rastreabilidade das informações financeiras, além de reduzir conflitos e simplificar a divisão dos gastos.
+O processo é finalizado quando **os membros do grupo recebem uma notificão de criação da despesa ou do abatimento**, o que assegura centralização, transparência e rastreabilidade das informações financeiras, além de reduzir conflitos e simplificar a divisão dos gastos.
 
 #### Modelagem
 
