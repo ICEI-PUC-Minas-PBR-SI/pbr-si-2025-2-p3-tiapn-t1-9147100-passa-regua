@@ -16,7 +16,7 @@ A arquitetura moderna (**React, Spring Boot, MySQL e AWS**) garante escalabilida
 
 ### Limitações
 
-Apesar de robusto, o sistema apresenta algumas limitações:
+Apesar de robusto, o sistema apresenta algumas limitações: 
 1.  **Pagamentos:** Ainda não há integração direta com meios de pagamento ou carteiras digitais, obrigando os acertos finais a ocorrerem fora da plataforma.
 2.  **Gamificação:** Devido a restrições de cronograma e à disponibilidade da equipe, este recurso não foi implementado na versão atual, sendo priorizados os requisitos essenciais.
 3.  **Conectividade:** Como o sistema depende de conectividade contínua, o uso pode ser limitado em locais com acesso precário à internet.
