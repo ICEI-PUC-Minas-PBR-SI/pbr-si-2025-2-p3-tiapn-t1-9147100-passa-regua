@@ -2,7 +2,7 @@
 
 ### 3.1. Modelagem da situação atual (Modelagem AS IS)
 
-O processo atual de gerenciamento de despesas coletivas em eventos ou viagens de grupo é predominantemente manual e apresenta problemas claros:
+O processo atual de gerenciamento de despesas coletivas em eventos ou viagens de grupo é predominantemente manual e apresenta problemas claros: 
 
 - Dependência de registros informais: decisões são tomadas em conversas de WhatsApp sem rastreabilidade formal.
 - Armazenamento descentralizado: notas fiscais guardadas em papel ou fotos, dificultando conferência posterior.
