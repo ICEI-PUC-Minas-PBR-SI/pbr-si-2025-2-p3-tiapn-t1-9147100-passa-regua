@@ -17,7 +17,7 @@
 
 ## Slides
 
-[Projeto-Passa-Regua (PDF)](./Projeto-Passa-Regua.pdf)
+[Projeto-Passa-Regua (PDF)](Projeto-Passa-Regua.pdf)
 
 ## Vídeo
 
