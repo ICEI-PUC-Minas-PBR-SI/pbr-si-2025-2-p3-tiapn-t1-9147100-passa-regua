@@ -17,7 +17,7 @@
 
 ## Slides
 
-Coloque aqui os slides da apresentação
+[Projeto-Passa-Regua (PDF)](./Projeto-Passa-Regua.pdf)
 
 ## Vídeo
 
