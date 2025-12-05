@@ -51,12 +51,14 @@ public class GroupService {
         return map.values().stream().map(g -> toDto(g, email)).toList();
     }
 
-    /** Carregar 1 grupo (usado na edicao) */
+    /** Carregar 1 grupo (owner ou membro pode visualizar) */
     public GroupResponse getOne(String email, Long id) {
         Group g = repo.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Grupo nao encontrado"));
 
-        if (!g.getOwnerEmail().equalsIgnoreCase(email)) {
+        boolean isOwner = g.getOwnerEmail().equalsIgnoreCase(email);
+        boolean isMember = isOwner || memberRepo.existsByGroupIdAndMemberEmail(id, email);
+        if (!isMember) {
             throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Sem permissao");
         }
         return toDto(g, email);
