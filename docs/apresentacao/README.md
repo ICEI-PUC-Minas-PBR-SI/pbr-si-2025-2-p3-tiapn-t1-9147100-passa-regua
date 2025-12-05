@@ -21,4 +21,4 @@ Coloque aqui os slides da apresentação
 
 ## Vídeo
 
-No caso de apresentação gravada, insira aqui o link do vídeo de apresentação.
+[Vídeo de apresentação.](https://youtu.be/EHCWDdd9edI)
